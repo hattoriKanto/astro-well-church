@@ -1,0 +1,17 @@
+---
+import type { JSX } from "astro/jsx-runtime";
+import type { TitleTag } from "./Title.types";
+import "./Title.css";
+
+type Props = {
+  tag: TitleTag;
+  style?: astroHTML.JSX.CSSProperties | string;
+};
+
+const { tag, style } = Astro.props;
+const Tag = tag as JSX.Element;
+---
+
+<Tag class={`title-${tag}`} style={style}>
+  <slot />
+</Tag>

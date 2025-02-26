@@ -1,0 +1,16 @@
+---
+import type { JSX } from "astro/jsx-runtime";
+import "./Description.css";
+
+type Props = {
+  tag: "span" | "p";
+  style?: astroHTML.JSX.CSSProperties | string;
+};
+
+const { tag, style } = Astro.props;
+const Tag = tag as JSX.Element;
+---
+
+<Tag class={`description-${tag}`} style={style}>
+  <slot />
+</Tag>

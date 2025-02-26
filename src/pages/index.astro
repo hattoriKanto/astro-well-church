@@ -1,11 +1,116 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import Container from "../ui/Container/Container.astro";
+import FlexWrapper from "../ui/FlexWrapper/FlexWrapper.astro";
+import Title from "../ui/Title/Title.astro";
+import Section from "../ui/Section/Section.astro";
+import Button from "../ui/Button/Button.astro";
+import ContentDecorations from "../ui/ContentDecorations/ContentDecorations";
+import Description from "../ui/Description/Description.astro";
+import SocialMedia from "../components/SocialMedia/SocialMedia.astro";
+import Iframe from "../components/Iframe/Iframe.astro";
+import ContactsList from "../components/ContactsList/ContactsList.astro";
+import Header from "../components/Header/Header.astro";
+import Cards from "../components/Cards/Cards.tsx";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import image1 from "../assets/image-1.jpg";
+import image2 from "../assets/image-2.jpg";
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+  <Section style="background-color: var(--seasalt)">
+    <Container>
+      <FlexWrapper style="gap: 20px">
+        <FlexWrapper
+          style="flex-direction: column; flex-basis: 50%; gap: 40px;"
+        >
+          <Title tag="h2">Section 1</Title>
+          <Description tag="p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus non eum fuga, provident in voluptatum expedita qui
+            cum, hic repellat laboriosam consequatur dignissimos aliquam
+            voluptatem quaerat odio cumque, quos rem.
+          </Description>
+          <Button href="#" backrgoundColor="var(--seasalt)">Learn more</Button>
+        </FlexWrapper>
+        <FlexWrapper style="flex-basis: 50%;">
+          <ContentDecorations
+            decorations={new Set(["bottom-right", "top-left"])}
+          >
+            <Image
+              src={image1}
+              alt=""
+              style="position: relative; z-index: 2; width: 100%; height: 100%; border-radius: 12px;"
+            />
+          </ContentDecorations>
+        </FlexWrapper>
+      </FlexWrapper>
+    </Container>
+  </Section>
+  <Section style="position: relative;">
+    <Image
+      src={image2}
+      alt=""
+      style="position: absolute; z-index: 2; width: 100%; height: 100%; top: 0; left: 0; filter: brightness(0.5); object-fit: cover;"
+    />
+    <Container>
+      <FlexWrapper
+        style="flex-direction: column; align-items: flex-start; gap: 40px; width: 70%;"
+      >
+        <Title tag="h2" style="color: var(--white);">Section 2</Title>
+        <Description tag="p" style="color: var(--white);">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+          vel cumque suscipit optio ex autem aperiam unde? Iste sequi mollitia
+          rem soluta quasi, laboriosam, similique ullam, sint adipisci quibusdam
+          dignissimos?
+        </Description>
+        <Button href="#" backrgoundColor="var(--white)">Learn More</Button>
+      </FlexWrapper>
+    </Container>
+  </Section>
+  <Section style="background-color:var(--blue)">
+    <Container>
+      <FlexWrapper
+        style="flex-direction: column; align-items: center; gap: 20px;"
+      >
+        <Title tag="h2" style="color: var(--white);">Section 3</Title>
+        <Description tag="p" style="color: var(--white); text-align: center;">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
+          consequatur impedit maiores harum facere perferendis enim.
+        </Description>
+        <Cards client:only="react" />
+      </FlexWrapper>
+    </Container>
+  </Section>
+  <Section style="background-color: var(--seasalt);">
+    <Container>
+      <FlexWrapper style="flex-direction: column; gap: 100px">
+        <FlexWrapper
+          style="align-items: stretch; justify-content: space-between; flex: 1;"
+        >
+          <FlexWrapper style="flex-direction: column; gap: 60px;">
+            <Title tag="h2">Find & Contact Us</Title>
+            <ContactsList />
+          </FlexWrapper>
+          <ContentDecorations
+            decorations={new Set(["bottom-right", "top-left"])}
+          >
+            <Iframe />
+          </ContentDecorations>
+        </FlexWrapper>
+      </FlexWrapper>
+    </Container>
+  </Section>
+  <Section style="position: relative; background-color: var(--blue)">
+    <Container>
+      <FlexWrapper style="align-items: center; justify-content: space-around;">
+        <Title tag="h2" style="color: var(--white);">
+          We are on social media platforms!
+        </Title>
+        <SocialMedia />
+      </FlexWrapper>
+    </Container>
+  </Section>
 </Layout>

@@ -1,0 +1,13 @@
+---
+import "./Section.css";
+
+type Props = {
+  style?: astroHTML.JSX.CSSProperties | string;
+};
+
+const { style } = Astro.props;
+---
+
+<section style={style} class="section">
+  <slot />
+</section>

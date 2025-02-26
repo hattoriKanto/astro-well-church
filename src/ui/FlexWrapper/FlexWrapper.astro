@@ -1,0 +1,13 @@
+---
+import "./FlexWrapper.css";
+
+type Props = {
+  style?: astroHTML.JSX.CSSProperties | string;
+};
+
+const { style } = Astro.props;
+---
+
+<div class="flex-wrapper" style={style}>
+  <slot />
+</div>
