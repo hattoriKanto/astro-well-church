@@ -13,6 +13,52 @@ import Iframe from "../components/Iframe/Iframe.astro";
 import ContactsList from "../components/ContactsList/ContactsList.astro";
 import Header from "../components/Header/Header.astro";
 import Cards from "../components/Cards/Cards.tsx";
+import Card from "../components/Cards/Card";
+
+type Event = {
+  id: number;
+  title: string;
+  description: string;
+  date: Date;
+};
+
+const events: Event[] = [
+  {
+    id: 1,
+    title: "Event 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
+    date: new Date(),
+  },
+  {
+    id: 2,
+    title: "Event 2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
+    date: new Date(),
+  },
+  {
+    id: 3,
+    title: "Event 3",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
+    date: new Date(),
+  },
+  {
+    id: 4,
+    title: "Event 4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
+    date: new Date(),
+  },
+  {
+    id: 5,
+    title: "Event 5",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
+    date: new Date(),
+  },
+];
 
 import image1 from "../assets/image-1.jpg";
 import image2 from "../assets/image-2.jpg";
@@ -33,7 +79,7 @@ import image2 from "../assets/image-2.jpg";
             cum, hic repellat laboriosam consequatur dignissimos aliquam
             voluptatem quaerat odio cumque, quos rem.
           </Description>
-          <Button href="#" backrgoundColor="var(--seasalt)">Learn more</Button>
+          <Button href="#" backgroundColor="var(--seasalt)">Learn more</Button>
         </FlexWrapper>
         <FlexWrapper style="flex-basis: 50%;">
           <ContentDecorations
@@ -66,7 +112,7 @@ import image2 from "../assets/image-2.jpg";
           rem soluta quasi, laboriosam, similique ullam, sint adipisci quibusdam
           dignissimos?
         </Description>
-        <Button href="#" backrgoundColor="var(--white)">Learn More</Button>
+        <Button href="#" backgroundColor="var(--white)">Learn More</Button>
       </FlexWrapper>
     </Container>
   </Section>
@@ -80,7 +126,44 @@ import image2 from "../assets/image-2.jpg";
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
           consequatur impedit maiores harum facere perferendis enim.
         </Description>
-        <Cards client:only="react" />
+        <Cards client:only="react" data={events} />
+      </FlexWrapper>
+    </Container>
+  </Section>
+  <Section style="background-color: var(--seasalt)">
+    <Container>
+      <FlexWrapper
+        style="flex-direction: column; align-items: center; gap: 80px"
+      >
+        <FlexWrapper
+          style="flex-direction: column; align-items: center; gap: 20px"
+        >
+          <Title tag="h2">Section 4</Title>
+          <Description tag="p" style="text-align: center;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+            error facilis explicabo inventore? Omnis a ipsum voluptas mollitia
+            molestias numquam cum accusantium architecto eveniet necessitatibus
+            quasi est, accusamus magni vitae.
+          </Description>
+        </FlexWrapper>
+        <FlexWrapper style="gap: 20px">
+          <Card
+            title={events[0].title}
+            description={events[0].description}
+            date={events[0].date}
+          />
+          <Card
+            title={events[1].title}
+            description={events[1].description}
+            date={events[1].date}
+          />
+          <Card
+            title={events[2].title}
+            description={events[2].description}
+            date={events[2].date}
+          />
+        </FlexWrapper>
+        <Button href="#" backgroundColor="var(--seasalt)">Learn More</Button>
       </FlexWrapper>
     </Container>
   </Section>

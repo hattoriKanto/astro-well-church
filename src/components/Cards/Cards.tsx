@@ -13,45 +13,11 @@ type Event = {
   date: Date;
 };
 
-const events: Event[] = [
-  {
-    id: 1,
-    title: "Event 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
-    date: new Date(),
-  },
-  {
-    id: 2,
-    title: "Event 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
-    date: new Date(),
-  },
-  {
-    id: 3,
-    title: "Event 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
-    date: new Date(),
-  },
-  {
-    id: 4,
-    title: "Event 4",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
-    date: new Date(),
-  },
-  {
-    id: 5,
-    title: "Event 5",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
-    date: new Date(),
-  },
-];
+type CardsProps = {
+  data: Event[];
+};
 
-const Cards = () => {
+const Cards: React.FC<CardsProps> = ({ data }) => {
   return (
     <>
       <div className="swiper__buttons">
@@ -113,7 +79,7 @@ const Cards = () => {
         pagination={{ clickable: true }}
         modules={[Pagination, Navigation]}
       >
-        {events.map(({ id, title, description, date }) => (
+        {data.map(({ id, title, description, date }) => (
           <SwiperSlide key={id}>
             <Card title={title} description={description} date={date} />
           </SwiperSlide>

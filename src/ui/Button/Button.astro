@@ -3,20 +3,20 @@ import "./Button.css";
 
 type Props = {
   href: string;
-  backrgoundColor?: string;
+  backgroundColor?: string;
   color?: string;
 };
 
-const { href, backrgoundColor = "transparent", color } = Astro.props;
+const { href, backgroundColor = "transparent", color } = Astro.props;
 ---
 
-<a class="button" href={href} style={{ backgroundColor: backrgoundColor }}>
-  <span class="top-key" style={{ backgroundColor: backrgoundColor }}></span>
+<a class="button" href={href} style={{ backgroundColor: backgroundColor }}>
+  <span class="top-key" style={{ backgroundColor: backgroundColor }}></span>
   <span class="text">
     <slot />
   </span>
-  <span class="bottom-key-1" style={{ backgroundColor: backrgoundColor }}
+  <span class="bottom-key-1" style={{ backgroundColor: backgroundColor }}
   ></span>
-  <span class="bottom-key-2" style={{ backgroundColor: backrgoundColor }}
+  <span class="bottom-key-2" style={{ backgroundColor: backgroundColor }}
   ></span>
 </a>

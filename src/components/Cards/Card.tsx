@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({ title, description, date }) => {
   const month = date.toLocaleDateString("default", { month: "long" });
 
   return (
-    <a href="" className="card">
+    <a href="#" className="card">
       <div className="card__wrapper">
         <div className="card__content">
           <h3>{title}</h3>
