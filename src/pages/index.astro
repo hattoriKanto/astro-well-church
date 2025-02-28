@@ -12,7 +12,8 @@ import SocialMedia from "../components/SocialMedia/SocialMedia.astro";
 import Iframe from "../components/Iframe/Iframe.astro";
 import ContactsList from "../components/ContactsList/ContactsList.astro";
 import Header from "../components/Header/Header.astro";
-import Cards from "../components/Cards/Cards.tsx";
+import Cards from "../components/Cards/Cards";
+import HoverCard from "../components/HoverCard/HoverCard";
 import Card from "../components/Cards/Card";
 
 type Event = {
@@ -164,6 +165,32 @@ import image2 from "../assets/image-2.jpg";
           />
         </FlexWrapper>
         <Button href="#" backgroundColor="var(--seasalt)">Learn More</Button>
+      </FlexWrapper>
+    </Container>
+  </Section>
+  <Section style="background-color:var(--blue)">
+    <Container>
+      <FlexWrapper style="gap: 60px;">
+        <FlexWrapper
+          style="flex-direction: column; align-items: flex-start; gap: 20px; flex-basis: 60%;"
+        >
+          <Title tag="h2" style="color: var(--white);">Section 5</Title>
+          <Description tag="p" style="color: var(--white);">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+            dolores, fugiat tempore nam aliquid alias magni eaque sequi nemo
+            recusandae sint assumenda aut blanditiis praesentium nobis voluptas
+            quae ipsum hic!
+          </Description>
+        </FlexWrapper>
+        <FlexWrapper style="gap: 5px; flex-basis: 40%;">
+          <HoverCard client:only="react" link="/services" title="Services" />
+          <HoverCard client:only="react" link="/events" title="Events" />
+          <HoverCard
+            client:only="react"
+            link="/ministries"
+            title="Ministries"
+          />
+        </FlexWrapper>
       </FlexWrapper>
     </Container>
   </Section>
