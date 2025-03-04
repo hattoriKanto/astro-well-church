@@ -1,0 +1,29 @@
+---
+import Image from "astro/components/Image.astro";
+import Container from "../../ui/Container/Container.astro";
+import Section from "../../ui/Section/Section.astro";
+import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
+import image from "../../assets/image-1.jpg";
+import Title from "../../ui/Title/Title.astro";
+import Description from "../../ui/Description/Description.astro";
+import "./HeroSection.css";
+import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+---
+
+<Section className="section-pattern-lines">
+  <Container style="padding-block: 0">
+    <FlexWrapper style="gap: 60px">
+      <FlexWrapper className="hero__text-wrapper">
+        <Subtitle>Subtitle</Subtitle>
+        <Title tag="h1">Hero Section</Title>
+        <Description tag="p">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
+          dolorem eaque possimus voluptate beatae reprehenderit maiores itaque,
+          veritatis facere qui eum eveniet error fugit ad ut aliquid debitis
+          vel. Perspiciatis.
+        </Description>
+      </FlexWrapper>
+      <Image src={image} alt="" />
+    </FlexWrapper>
+  </Container>
+</Section>

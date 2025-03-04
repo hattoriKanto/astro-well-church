@@ -25,6 +25,7 @@
   --youtubeColor: #ff0000;
   --transition: 500ms;
   --headerSize: 64px;
+  --paddingSection: 120px;
 }
 
 * {

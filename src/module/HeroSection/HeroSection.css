@@ -1,0 +1,17 @@
+.section img {
+  min-width: 50%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.hero__text-wrapper {
+  padding-top: calc(var(--paddingSection) + var(--headerSize));
+  padding-bottom: var(--paddingSection);
+  min-width: 50%;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  flex: 1;
+}

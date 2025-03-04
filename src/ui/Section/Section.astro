@@ -2,12 +2,13 @@
 import "./Section.css";
 
 type Props = {
+  className?: string;
   style?: astroHTML.JSX.CSSProperties | string;
 };
 
-const { style } = Astro.props;
+const { style, className } = Astro.props;
 ---
 
-<section style={style} class="section">
+<section style={style} class=`section ${className}`>
   <slot />
 </section>

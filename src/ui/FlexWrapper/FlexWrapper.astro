@@ -2,12 +2,13 @@
 import "./FlexWrapper.css";
 
 type Props = {
+  className?: string;
   style?: astroHTML.JSX.CSSProperties | string;
 };
 
-const { style } = Astro.props;
+const { style, className } = Astro.props;
 ---
 
-<div class="flex-wrapper" style={style}>
+<div class=`flex-wrapper ${className}` style={style}>
   <slot />
 </div>

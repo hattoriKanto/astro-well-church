@@ -1,7 +1,13 @@
 ---
 import "./Container.css";
+
+type Props = {
+  style?: astroHTML.JSX.CSSProperties | string;
+};
+
+const { style } = Astro.props;
 ---
 
-<div class="container">
+<div style={style} class="container">
   <slot />
 </div>

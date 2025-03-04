@@ -1,4 +1,20 @@
 .section {
-  padding-block: 120px;
   flex: 1;
+}
+
+.section-pattern-lines {
+  background-color: var(--seasalt);
+  background-image: linear-gradient(
+    45deg,
+    transparent 24%,
+    var(--white) 25%,
+    var(--white) 26%,
+    transparent 27%,
+    transparent 74%,
+    var(--white) 75%,
+    var(--white) 76%,
+    transparent 77%,
+    transparent
+  );
+  background-size: 55px 55px;
 }
