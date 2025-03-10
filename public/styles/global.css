@@ -34,6 +34,8 @@
   --transition: 500ms;
   --headerSize: 64px;
   --paddingSection: 120px;
+  --gapBetweenTextImage: 60px;
+  --gapBetweenText: 20px;
 }
 
 * {

@@ -3,26 +3,87 @@ import Layout from "../layouts/Layout.astro";
 import ChurchMember from "../ui/ChurchMember/ChurchMember.astro";
 import Container from "../ui/Container/Container.astro";
 import FlexWrapper from "../ui/FlexWrapper/FlexWrapper.astro";
+import TextImageSection from "../ui/TextImageSection/TextImageSection.astro";
 import Section from "../ui/Section/Section.astro";
 import Subtitle from "../ui/Subtitle/Subtitle.astro";
 import Title from "../ui/Title/Title.astro";
-
 import organizationInfo from "../constants/organizationInfo";
+
+import image1 from "../assets/image-1.jpg";
+import image2 from "../assets/image-2.jpg";
 ---
 
 <Layout title="Learn more about us! | Well church">
+  <Section style="background-color: var(--seasalt);">
+    <Container>
+      <FlexWrapper
+        style="flex-direction: column; align-items: center; gap: var(--gapBetweenTextImage)"
+      >
+        <FlexWrapper
+          style="flex-direction: column; align-items: center; gap: var(--gapBetweenText)"
+        >
+          <Subtitle>benefits</Subtitle>
+          <Title tag="h2">the benefits of joining our church</Title>
+        </FlexWrapper>
+        <FlexWrapper
+          style="flex-direction: column; gap: var(--gapBetweenTextImage)"
+        >
+          <TextImageSection
+            textData={{
+              title: "find fulfillment and joy",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+            }}
+            image={image2}
+            backgroundColor="var(--seasalt)"
+          />
+          <TextImageSection
+            isReversed
+            textData={{
+              title: "shared values",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+            }}
+            image={image1}
+            backgroundColor="var(--seasalt)"
+          />
+          <TextImageSection
+            textData={{
+              title: "charity events",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+            }}
+            image={image2}
+            backgroundColor="var(--seasalt)"
+          />
+          <TextImageSection
+            isReversed
+            textData={{
+              title: "All are welcome",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+            }}
+            image={image1}
+            backgroundColor="var(--seasalt)"
+          />
+        </FlexWrapper>
+      </FlexWrapper>
+    </Container>
+  </Section>
   <Section>
     <Container>
       <FlexWrapper
-        style="flex-direction: column; align-items: center; gap: 60px"
+        style="flex-direction: column; align-items: center; gap: var(--gapBetweenTextImage)"
       >
         <FlexWrapper
-          style="flex-direction: column; align-items: center; gap: 20px"
+          style="flex-direction: column; align-items: center; gap: var(--gapBetweenText)"
         >
           <Subtitle>Church Members</Subtitle>
           <Title tag="h2">meet our Inspirational team</Title>
         </FlexWrapper>
-        <FlexWrapper style="justify-content: center; gap: 20px">
+        <FlexWrapper
+          style="justify-content: center; gap: var(--gapBetweenText)"
+        >
           {
             organizationInfo.churchMembers.map((churchMemberData) => {
               return (

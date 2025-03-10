@@ -1,0 +1,38 @@
+---
+import Image from "astro/components/Image.astro";
+import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
+
+import "./TextImageSection.css";
+
+type TextData = {
+  title: string;
+  description: string;
+};
+
+type Props = {
+  isReversed?: boolean;
+  backgroundColor?: string;
+  textData: TextData;
+  image: ImageMetadata;
+};
+
+const {
+  isReversed,
+  backgroundColor = "transparent",
+  textData: { title, description },
+  image,
+} = Astro.props;
+---
+
+<FlexWrapper className=`${isReversed ? 'text-image reversed' : "text-image"}`>
+  <FlexWrapper className="text-image__text-wrapper">
+    <h3 class="text-image__title">{title}</h3>
+    <p class="text-image__description">{description}</p>
+  </FlexWrapper>
+  <div class="text-image__image-wrapper">
+    <span class="top-key" style={{ backgroundColor }}></span>
+    <Image class="text-image__image" src={image} alt="" />
+    <span class="bottom-key-1" style={{ backgroundColor }}></span>
+    <span class="bottom-key-2" style={{ backgroundColor }}></span>
+  </div>
+</FlexWrapper>
