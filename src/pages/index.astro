@@ -11,7 +11,7 @@ import Description from "../ui/Description/Description.astro";
 import SocialMedia from "../components/SocialMedia/SocialMedia.astro";
 import Iframe from "../components/Iframe/Iframe.astro";
 import ContactsList from "../components/ContactsList/ContactsList.astro";
-import Header from "../components/Header/Header.astro";
+import HeroSection from "../module/HeroSection/HeroSection.astro";
 import Cards from "../components/Cards/Cards";
 import HoverCard from "../components/HoverCard/HoverCard";
 import Card from "../components/Cards/Card";
@@ -63,11 +63,9 @@ const events: Event[] = [
 
 import image1 from "../assets/image-1.jpg";
 import image2 from "../assets/image-2.jpg";
-import HeroSection from "../module/HeroSection/HeroSection.astro";
 ---
 
-<Layout>
-  <Header />
+<Layout title="Welcome! | Well Church">
   <HeroSection />
   <Section style="background-color: var(--seasalt)">
     <Container>
