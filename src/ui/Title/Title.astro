@@ -1,7 +1,8 @@
 ---
 import type { JSX } from "astro/jsx-runtime";
-import type { TitleTag } from "./Title.types";
 import "./Title.css";
+
+type TitleTag = "h1" | "h2";
 
 type Props = {
   tag: TitleTag;

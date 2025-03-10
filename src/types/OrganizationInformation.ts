@@ -11,8 +11,15 @@ type Contacts = {
   address: string;
 };
 
+export type ChurchMember = {
+  name: string;
+  position: string;
+  image: ImageMetadata;
+};
+
 export type OrganizationInformation = {
   socialMedia: SocialMedia;
   contacts: Contacts;
+  churchMembers: ChurchMember[];
   mapLink: string;
 };

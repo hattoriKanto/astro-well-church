@@ -4,10 +4,9 @@ import "./Button.css";
 type Props = {
   href: string;
   backgroundColor?: string;
-  color?: string;
 };
 
-const { href, backgroundColor = "transparent", color } = Astro.props;
+const { href, backgroundColor = "transparent" } = Astro.props;
 ---
 
 <a class="button" href={href} style={{ backgroundColor: backgroundColor }}>

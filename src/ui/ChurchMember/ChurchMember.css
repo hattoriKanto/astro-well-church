@@ -1,0 +1,68 @@
+.church-member {
+  border: 2px solid var(--black);
+  display: inline-block;
+  position: relative;
+  transition: all var(--transition) ease-in-out;
+}
+
+.church-member__wrapper {
+  padding: 20px;
+  height: 100%;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.church-member__image-wrapper {
+  width: 50%;
+  height: 50%;
+
+  border: 6px solid var(--darkWhite);
+  border-radius: 100%;
+}
+
+.church-member__text-wrapper {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.church-member__image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.church-member__position {
+  font-size: 14px;
+}
+
+.church-member .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  transition: width var(--transition) ease-out, left var(--transition) ease-out;
+}
+
+.church-member .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  transition: width var(--transition) ease-out, right var(--transition) ease-out;
+}
+
+.church-member .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  transition: width var(--transition) ease-out, right var(--transition) ease-out;
+}

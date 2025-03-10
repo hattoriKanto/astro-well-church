@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ChurchMember from "../ui/ChurchMember/ChurchMember.astro";
+import Container from "../ui/Container/Container.astro";
+import FlexWrapper from "../ui/FlexWrapper/FlexWrapper.astro";
+import Section from "../ui/Section/Section.astro";
+import Subtitle from "../ui/Subtitle/Subtitle.astro";
+import Title from "../ui/Title/Title.astro";
+
+import organizationInfo from "../constants/organizationInfo";
+---
+
+<Layout title="Learn more about us! | Well church">
+  <Section>
+    <Container>
+      <FlexWrapper
+        style="flex-direction: column; align-items: center; gap: 60px"
+      >
+        <FlexWrapper
+          style="flex-direction: column; align-items: center; gap: 20px"
+        >
+          <Subtitle>Church Members</Subtitle>
+          <Title tag="h2">meet our Inspirational team</Title>
+        </FlexWrapper>
+        <FlexWrapper style="justify-content: center; gap: 20px">
+          {
+            organizationInfo.churchMembers.map((churchMemberData) => {
+              return (
+                <ChurchMember
+                  backgroundColor="var(--white)"
+                  memberData={churchMemberData}
+                />
+              );
+            })
+          }
+        </FlexWrapper>
+      </FlexWrapper>
+    </Container>
+  </Section>
+</Layout>

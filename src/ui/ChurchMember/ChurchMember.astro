@@ -1,0 +1,34 @@
+---
+import { type ChurchMember } from "../../types/OrganizationInformation";
+import Image from "astro/components/Image.astro";
+import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
+
+import "./ChurchMember.css";
+
+type Props = {
+  memberData: ChurchMember;
+  backgroundColor?: string;
+};
+
+const {
+  memberData: { image, name, position },
+  backgroundColor = "transparent",
+} = Astro.props;
+---
+
+<div class="church-member">
+  <span class="top-key" style={{ backgroundColor: backgroundColor }}></span>
+  <FlexWrapper className="church-member__wrapper">
+    <div class="church-member__image-wrapper">
+      <Image class="church-member__image" src={image} alt="" />
+    </div>
+    <FlexWrapper className="church-member__text-wrapper">
+      <h3 class="church-member__name">{name}</h3>
+      <p class="church-member__position">{position}</p>
+    </FlexWrapper>
+  </FlexWrapper>
+  <span class="bottom-key-1" style={{ backgroundColor: backgroundColor }}
+  ></span>
+  <span class="bottom-key-2" style={{ backgroundColor: backgroundColor }}
+  ></span>
+</div>
