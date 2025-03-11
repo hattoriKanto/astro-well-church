@@ -3,17 +3,61 @@ import Layout from "../layouts/Layout.astro";
 import ChurchMember from "../ui/ChurchMember/ChurchMember.astro";
 import Container from "../ui/Container/Container.astro";
 import FlexWrapper from "../ui/FlexWrapper/FlexWrapper.astro";
-import TextImageSection from "../ui/TextImageSection/TextImageSection.astro";
 import Section from "../ui/Section/Section.astro";
 import Subtitle from "../ui/Subtitle/Subtitle.astro";
 import Title from "../ui/Title/Title.astro";
+import Description from "../ui/Description/Description.astro";
+import ImagesWrapper from "../components/ImagesWrapper/ImagesWrapper.astro";
+import TextImageSection from "../components/TextImageSection/TextImageSection.astro";
 import organizationInfo from "../constants/organizationInfo";
 
 import image1 from "../assets/image-1.jpg";
 import image2 from "../assets/image-2.jpg";
+import TextWrapper from "../components/TextWrapper/TextWrapper.astro";
 ---
 
 <Layout title="Learn more about us! | Well church">
+  <Section>
+    <Container>
+      <FlexWrapper
+        style="flex-direction: column; align-items: center; gap: var(--gapBetweenTextImage)"
+      >
+        <FlexWrapper
+          style="flex-direction: column; align-items: center; gap: var(--gapBetweenText)"
+        >
+          <Subtitle>Welcome to our church</Subtitle>
+          <Title tag="h2">Love and compassion</Title>
+          <Description tag="p" style="text-align: center;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+            cum commodi corrupti minima ea nobis? Nulla deserunt ab ipsa
+            repudiandae autem atque inventore distinctio modi similique
+            recusandae sed, corrupti esse!
+          </Description>
+        </FlexWrapper>
+        <ImagesWrapper images={[image1, image2, image1]} />
+        <FlexWrapper
+          style="justify-content: space-between; gap: var(--gapBetweenTextImage)"
+        >
+          <TextWrapper
+            textData={{
+              title: "striving for a better tomorrow",
+              subtitle: "our mission & Vision",
+              description:
+                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi assumenda debitis dicta ea quibusdam rerum, repellat cupiditate a distinctio doloribus quaerat praesentium dolorereiciendis culpa nisi autem veniam, rem sint?",
+            }}
+          />
+          <TextWrapper
+            textData={{
+              title: "brigning peace and joy to the world",
+              subtitle: "what we do",
+              description:
+                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi assumenda debitis dicta ea quibusdam rerum, repellat cupiditate a distinctio doloribus quaerat praesentium dolorereiciendis culpa nisi autem veniam, rem sint?",
+            }}
+          />
+        </FlexWrapper>
+      </FlexWrapper>
+    </Container>
+  </Section>
   <Section style="background-color: var(--seasalt);">
     <Container>
       <FlexWrapper

@@ -1,0 +1,28 @@
+---
+import Image from "astro/components/Image.astro";
+import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
+
+import "./ImagesWrapper.css";
+
+type Props = {
+  images: ImageMetadata[];
+  backgroundColor?: string;
+};
+
+const { images, backgroundColor = "var(--white)" } = Astro.props;
+---
+
+<FlexWrapper className="images-wrapper">
+  {
+    images.map((image) => {
+      return (
+        <div class="images-wrapper__image-wrapper">
+          <span class="top-key" style={{ backgroundColor }} />
+          <Image class="images-wrapper__image" src={image} alt="" />
+          <span class="bottom-key-1" style={{ backgroundColor }} />
+          <span class="bottom-key-2" style={{ backgroundColor }} />
+        </div>
+      );
+    })
+  }
+</FlexWrapper>

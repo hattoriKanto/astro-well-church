@@ -12,12 +12,12 @@ type Props = {
 
 const {
   memberData: { image, name, position },
-  backgroundColor = "transparent",
+  backgroundColor = "var(--white)",
 } = Astro.props;
 ---
 
 <div class="church-member">
-  <span class="top-key" style={{ backgroundColor: backgroundColor }}></span>
+  <span class="top-key" style={{ backgroundColor }}></span>
   <FlexWrapper className="church-member__wrapper">
     <div class="church-member__image-wrapper">
       <Image class="church-member__image" src={image} alt="" />
@@ -27,8 +27,6 @@ const {
       <p class="church-member__position">{position}</p>
     </FlexWrapper>
   </FlexWrapper>
-  <span class="bottom-key-1" style={{ backgroundColor: backgroundColor }}
-  ></span>
-  <span class="bottom-key-2" style={{ backgroundColor: backgroundColor }}
-  ></span>
+  <span class="bottom-key-1" style={{ backgroundColor }}></span>
+  <span class="bottom-key-2" style={{ backgroundColor }}></span>
 </div>

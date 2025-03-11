@@ -6,16 +6,14 @@ type Props = {
   backgroundColor?: string;
 };
 
-const { href, backgroundColor = "transparent" } = Astro.props;
+const { href, backgroundColor = "var(--white)" } = Astro.props;
 ---
 
-<a class="button" href={href} style={{ backgroundColor: backgroundColor }}>
-  <span class="top-key" style={{ backgroundColor: backgroundColor }}></span>
+<a class="button" href={href} style={{ backgroundColor }}>
+  <span class="top-key" style={{ backgroundColor }}></span>
   <span class="text">
     <slot />
   </span>
-  <span class="bottom-key-1" style={{ backgroundColor: backgroundColor }}
-  ></span>
-  <span class="bottom-key-2" style={{ backgroundColor: backgroundColor }}
-  ></span>
+  <span class="bottom-key-1" style={{ backgroundColor }}></span>
+  <span class="bottom-key-2" style={{ backgroundColor }}></span>
 </a>

@@ -36,6 +36,7 @@
   --paddingSection: 120px;
   --gapBetweenTextImage: 60px;
   --gapBetweenText: 20px;
+  --gapBetweenImages: 20px;
 }
 
 * {

@@ -1,0 +1,9 @@
+.text-wrapper {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gapBetweenText);
+}
+
+.text-wrapper__title {
+  font-size: 32px;
+}
