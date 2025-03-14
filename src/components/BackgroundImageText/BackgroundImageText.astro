@@ -1,0 +1,38 @@
+---
+import Container from "../../ui/Container/Container.astro";
+import Description from "../../ui/Description/Description.astro";
+import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
+import Section from "../../ui/Section/Section.astro";
+import Title from "../../ui/Title/Title.astro";
+
+import "./BackgroundImageText.css";
+
+type TextData = {
+  title: string;
+  subtitle: string;
+};
+
+type Props = {
+  backgroundImage: ImageMetadata;
+  text: TextData;
+};
+
+const {
+  backgroundImage,
+  text: { subtitle, title },
+} = Astro.props;
+---
+
+<Section className="background-image-text">
+  <div
+    class="background-image-text__background"
+    style=`background-image: url(${backgroundImage.src});`
+  >
+  </div>
+  <Container>
+    <FlexWrapper className="background-image-text__wrapper">
+      <Title tag="h1" style="color: var(--white);">{subtitle}</Title>
+      <Description tag="p" style="color: var(--white);">{title}</Description>
+    </FlexWrapper>
+  </Container>
+</Section>
