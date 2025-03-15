@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import Container from "../../ui/Container/Container.astro";
+import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
+import organizationInfo from "../../constants/organizationInfo";
+import getFormattedPhone from "../../helpers/getFormattedPhone";
+
+import "./Footer.css";
+import logo from "../../assets/logo.png";
+
+const {
+  mapLink,
+  contacts: { email, phone, address },
+} = organizationInfo;
+const formattedPhone = getFormattedPhone(phone);
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <Container>
+    <FlexWrapper className="footer__wrapper">
+      <FlexWrapper className="footer__information information">
+        <FlexWrapper className="information__column">
+          <Image class="footer__logo" src={logo} alt="" />
+          <p>{`© Copyright Well Church ${currentYear}`}</p>
+        </FlexWrapper>
+        <FlexWrapper className="information__column">
+          <a href={`mailto:${email}`} class="information__link">
+            {email}
+          </a>
+          <a href=`tel:${formattedPhone}` class="information__link">
+            {phone}
+          </a>
+          <a href={mapLink} class="information__link">
+            {address}
+          </a>
+        </FlexWrapper>
+      </FlexWrapper>
+      <FlexWrapper className="footer__links">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">Link 1</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Link 2</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Link 3</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Link 4</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">Link 5</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Link 6</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Link 7</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Link 8</a>
+          </li>
+        </ul>
+      </FlexWrapper>
+    </FlexWrapper>
+  </Container>
+</footer>
