@@ -13,6 +13,7 @@ import BackgroundImageText from "../components/BackgroundImageText/BackgroundIma
 import TextWrapper from "../components/TextWrapper/TextWrapper.astro";
 import Footer from "../components/Footer/Footer.astro";
 import organizationInfo from "../constants/organizationInfo";
+import OurTeam from "../module/OurTeam/OurTeam.astro";
 
 import image1 from "../assets/image-1.jpg";
 import image2 from "../assets/image-2.jpg";
@@ -121,33 +122,6 @@ import backgroundImage from "../assets/background-image-1.jpg";
       </FlexWrapper>
     </Container>
   </Section>
-  <Section>
-    <Container>
-      <FlexWrapper
-        style="flex-direction: column; align-items: center; gap: var(--gapBetweenTextImage)"
-      >
-        <FlexWrapper
-          style="flex-direction: column; align-items: center; gap: var(--gapBetweenText)"
-        >
-          <Subtitle>Church Members</Subtitle>
-          <Title tag="h2">meet our Inspirational team</Title>
-        </FlexWrapper>
-        <FlexWrapper
-          style="justify-content: center; gap: var(--gapBetweenText)"
-        >
-          {
-            organizationInfo.churchMembers.map((churchMemberData) => {
-              return (
-                <ChurchMember
-                  backgroundColor="var(--white)"
-                  memberData={churchMemberData}
-                />
-              );
-            })
-          }
-        </FlexWrapper>
-      </FlexWrapper>
-    </Container>
-  </Section>
+  <OurTeam />
   <Footer />
 </Layout>

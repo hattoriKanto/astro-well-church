@@ -18,24 +18,54 @@ const organizationInfo: OrganizationInformation = {
   },
   churchMembers: [
     {
-      name: "Lars Landof",
-      position: "Pastor, Church",
+      name: "Багнюк Сергій",
+      position: "Пастор Церкви",
       image: member1,
     },
     {
-      name: "Harris Ford",
-      position: "Pastor, Church",
+      name: "Федорович Володимир",
+      position: "Диякон Церкви, адміністративний офіс",
       image: member2,
     },
     {
-      name: "Stefan McLaffely",
-      position: "Pastor, Church",
+      name: "Колісніченко Іван",
+      position: "Диякон Церкви, лідер ремонтної команди",
       image: member3,
     },
     {
-      name: "Just a Cool Guy",
-      position: "Cool Guy",
+      name: "Хоменко Олексій",
+      position: "Диякон Церкви, лідер групи опіки",
       image: member4,
+    },
+    {
+      name: "Кулаков Олександр",
+      position: "Диякон Церкви, директор Центру соціальної адаптації",
+      image: member1,
+    },
+    {
+      name: "Романюк Денис",
+      position: "Диякон Церкви, лідер молодіжного служіння",
+      image: member2,
+    },
+    {
+      name: "Горчаков Ігор",
+      position: "Диякон Церкви, фахівець з мереж та комунікацій",
+      image: member3,
+    },
+    {
+      name: "Шумаєв Юрій",
+      position: "Диякон Церкви, група подій та привітання",
+      image: member4,
+    },
+    {
+      name: "Шумейко Володимир",
+      position: "Диякон Церкви, директор реновації",
+      image: member1,
+    },
+    {
+      name: "Седень Тимофій",
+      position: "Диякон Церкви, лідер служіння слова",
+      image: member2,
     },
   ],
   mapLink: "https://maps.app.goo.gl/697Pas2LSeD5FBgDA",

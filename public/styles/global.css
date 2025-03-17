@@ -37,6 +37,8 @@
   --gapBetweenTextImage: 60px;
   --gapBetweenText: 20px;
   --gapBetweenImages: 20px;
+
+  --churchMemberCardSize: 280px;
 }
 
 * {

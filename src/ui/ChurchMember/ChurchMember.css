@@ -1,12 +1,14 @@
 .church-member {
-  border: 2px solid var(--black);
-  display: inline-block;
   position: relative;
+  padding: 20px;
+  height: var(--churchMemberCardSize);
+  width: var(--churchMemberCardSize);
+  display: inline-block;
+  border: 2px solid var(--black);
   transition: all var(--transition) ease-in-out;
 }
 
 .church-member__wrapper {
-  padding: 20px;
   height: 100%;
 
   flex-direction: column;
@@ -38,6 +40,11 @@
 
 .church-member__position {
   font-size: 14px;
+  text-align: center;
+}
+
+.church-member__name {
+  text-align: center;
 }
 
 .church-member .top-key {

@@ -9,6 +9,6 @@ type Props = {
 const { style, className } = Astro.props;
 ---
 
-<div class=`flex-wrapper ${className}` style={style}>
+<div class=`flex-wrapper${className ? ' ' + className : ''}` style={style}>
   <slot />
 </div>

@@ -1,0 +1,36 @@
+---
+import organizationInfo from "../../constants/organizationInfo";
+import Container from "../../ui/Container/Container.astro";
+import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
+import Section from "../../ui/Section/Section.astro";
+import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+import Title from "../../ui/Title/Title.astro";
+import ChurchMember from "../../ui/ChurchMember/ChurchMember.astro";
+
+import "./OurTeam.css";
+---
+
+<Section className="our-team">
+  <Container>
+    <div class="our-team__wrapper">
+      <div class="our-team__text-wrapper">
+        <Subtitle>Наша команда</Subtitle>
+        <Title tag="h2" style={{ textAlign: "center" }}>
+          знайомтеся з нашою надихаючою командою
+        </Title>
+      </div>
+      <div class="our-team__cards-wrapper">
+        {
+          organizationInfo.churchMembers.map((churchMemberData) => {
+            return (
+              <ChurchMember
+                backgroundColor="var(--white)"
+                memberData={churchMemberData}
+              />
+            );
+          })
+        }
+      </div>
+    </div>
+  </Container>
+</Section>
