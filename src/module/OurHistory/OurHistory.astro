@@ -1,0 +1,51 @@
+---
+import ImagesWrapper from "../../components/ImagesWrapper/ImagesWrapper.astro";
+import TextWrapper from "../../components/TextWrapper/TextWrapper.astro";
+import Container from "../../ui/Container/Container.astro";
+import Description from "../../ui/Description/Description.astro";
+import Section from "../../ui/Section/Section.astro";
+import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+import Title from "../../ui/Title/Title.astro";
+
+import "./OurHistory.css";
+
+import image1 from "../../assets/image-1.jpg";
+import image2 from "../../assets/image-2.jpg";
+---
+
+<Section className="our-history">
+  <Container>
+    <div class="our-history__wrapper">
+      <div class="our-history__text-wrapper">
+        <Subtitle>Наша Історія</Subtitle>
+        <Title tag="h2">Дізнайся про історію нашої громади</Title>
+        <Description tag="p" style={{ textAlign: "center" }}>
+          Помісна Церква була започаткована під час Другої Світової війни у 1942
+          році. Окупаційна німецька влада давала дозвіл віруючим мати спільні
+          зібрання. Офіційною датою заснування Помісної Церкви вважається 11
+          квітня 1945 року, коли радянська влада видала документ про офіційну
+          реєстрацію Куренівської Церкви ЄХБ. Протягом радянських часів помісна
+          Церква часто міняла місце своїх зібрань. Проте громада постійно
+          поповнювалася новими християнами та служителями. Бог благословляв Свій
+          народ та проводив шляхом освячення.
+        </Description>
+      </div>
+      <ImagesWrapper images={[image1, image2, image1]} />
+      <div class="our-history__content-wrapper">
+        <TextWrapper
+          textData={{
+            title: "Часи незалежності",
+            description:
+              "У 2009 році відбулося офіційне відкриття нового Дому молитви вже Церкви Різдва Христового, який був побудований на вулиці Кобзарській, 10, де Помісна Церква в наступні роки продовжувала своє життя та служіння, проповідуючи Євангелію світу.",
+          }}
+        />
+        <TextWrapper
+          textData={{
+            title: "новітня історія",
+            description: `Після початку повномасштабного вторгнення значна частина християн покинули країну та протягом 2022-2025 років склад церковної сім'ї та служителів Церкви значно змінився. В серпні 2024 року Помісна Церква змінила свою назву на Церква "ДЖЕРЕЛО"  та почала свій новий шлях життя та служіння Господу.`,
+          }}
+        />
+      </div>
+    </div>
+  </Container>
+</Section>

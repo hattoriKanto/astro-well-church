@@ -1,0 +1,23 @@
+.our-history {
+  background-color: var(--white);
+}
+
+.our-history__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.our-history__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.our-history__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}

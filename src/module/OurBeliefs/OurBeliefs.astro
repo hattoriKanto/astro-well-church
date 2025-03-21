@@ -1,0 +1,192 @@
+---
+import TextImageSection from "../../components/TextImageSection/TextImageSection.astro";
+import Container from "../../ui/Container/Container.astro";
+import Section from "../../ui/Section/Section.astro";
+import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+import Title from "../../ui/Title/Title.astro";
+
+import "./OurBeliefs.css";
+
+import image1 from "../../assets/image-1.jpg";
+import image2 from "../../assets/image-2.jpg";
+import { SvgMinus, SvgPlus } from "../../ui/SvgIcons/SvgIcons";
+---
+
+<Section className="our-beliefs">
+  <Container>
+    <div class="our-beliefs__wrapper">
+      <div class="our-beliefs__text-wrapper">
+        <Subtitle>Наші віровчення</Subtitle>
+        <Title tag="h2">у що ми віримо?</Title>
+      </div>
+      <div data-astro="client:load" class="our-beliefs__accordion-wrapper">
+        <div class="our-beliefs__accordion">
+          <div class="our-beliefs__accordion-header">
+            <span class="top-key" style={{ backgroundColor: "var(--seasalt)" }}
+            ></span>
+            <h3 class="our-beliefs__accordion-title">
+              Вчення про Святе Писання
+            </h3>
+            <SvgPlus />
+            <SvgMinus />
+            <span
+              class="bottom-key-1"
+              style={{ backgroundColor: "var(--seasalt)" }}></span>
+            <span
+              class="bottom-key-2"
+              style={{ backgroundColor: "var(--seasalt)" }}></span>
+          </div>
+          <div class="our-beliefs__content-wrapper">
+            <TextImageSection
+              backgroundColor="var(--seasalt)"
+              description='Ми віримо, що "все Писання натхненне Богом" (2Тимофію 3:16), і під цим розуміємо, що вся Біблія є натхненною Богом, тому що святі мужі Божі були скеровані Духом Святим написати її (2Петра 1:21). Це натхнення поширюється однаково і повністю на всі частини Писання – історичні, поетичні, повчальні книги та книги пророків. Тому Біблія є безпомилковою у тексті оригіналу, авторитетною та достатньою на всі часи (2Петра 1:19; Івана 5:39), христоцентричною – розповідає про Христа, христологічною – навчає про Христа.'
+              image={image2}
+            />
+            <TextImageSection
+              isReversed
+              backgroundColor="var(--seasalt)"
+              description="Центром усієї Біблії є Ісус Христос – Господь і Спаситель, Його Особа та Його праця під час першого і другому приходів. Отже, жодна частина Біблії, у тому числі й Старий Завіт, не може вважатися правильно прочитаною або сприйнятою, якщо вона не спрямовує до Нього (Луки 24:27,44; Дії 17:2-3; 18:28; 26:22-23; 28:23). Тому, маючи Божий авторитет і силу впливу на людей, Святе Писання як Слово Боже дане нам для керівництва у всіх сферах нашого життя (Ісая 55:10-11; Псалом 118:105; Римлян 15:4; 1Коринтян 10:11)."
+              image={image1}
+            />
+            <TextImageSection
+              backgroundColor="var(--seasalt)"
+              description="Наша віра будується на відкритті: Бог відкриває Себе в історії людства, і 66 книг Біблії є виявом Його самовідкриття (Євреїв 1:1-3). Ми віримо, що, з одного боку, Писання є істинним свідченням благочестивих людей про Бога, Якого вони любили та Якому служили, а з іншого боку – є Божим свідченням і Божою наукою у зрозумілій для людини формі."
+              image={image2}
+            />
+            <TextImageSection
+              isReversed
+              backgroundColor="var(--seasalt)"
+              description="Ісус Христос розглядав Писання як настанови Свого Небесного Отця (Матвія 4:4; 7:10; 5:19-20; 19:4-6; 26:31,52-54). Апостол Павло описував Старий Заповіт як повністю натхненний Богом. Апостол Петро підтверджує божественне походження біблійної науки (2Петра 1:21; 1Петра 1:10-12)."
+              image={image1}
+            />
+            <TextImageSection
+              backgroundColor="var(--seasalt)"
+              description="Церква справедливо вважає справжні апостольські Писання такими, що довершують Біблію (1Коринтян 2:12-13). Ми віримо, що Писання є одночасно повністю людською та повністю божественною книгою. Тому весь її багатогранний вміст – історія, пророцтва, поезія, пісні, мудрість, проповіді, листи та все інше – приймаємо як від Бога. Визнання Біблії, як авторитетного та безпомилкового Слова Божого, зобов’язує нас дякувати Богові за дар Його написаного Слова (2Коринтян 9:15), старанно будувати нашу віру й життя повністю та виключно на Ньому (Римлян 10:17; Юди 1:20)."
+              image={image2}
+            />
+            <TextImageSection
+              isReversed
+              backgroundColor="var(--seasalt)"
+              description="Ми віримо, що Писання – божественна книга для людей, тлумачення якої повинно враховувати відомості про автора книги, історичний та культурний контекст її написання (Луки 10:26). Водночас Біблія містить і алегоричні тексти. Кожна книга Біблії написана зрозуміло для тих читачів, до яких вона зверталася. Це також стосується книг, які широко використовують символічну мову, – книг Даниїла, Захарії та Об’явлення."
+              image={image1}
+            />
+            <TextImageSection
+              backgroundColor="var(--seasalt)"
+              description="Читаючи та пояснюючи Святе Писання, ми повинні дотримуватися двох принципів: сприймати факти, заповіді, обітниці та застереження, які Бог повідомляє нам, так, як вони написані (Луки 8:5-8); молитовно на підставі Писання роздумувати та знаходити те, що Бог хоче відкрити (Луки 8:9-15)."
+              image={image2}
+            />
+          </div>
+        </div>
+        <div class="our-beliefs__accordion">
+          <div class="our-beliefs__accordion-header">
+            <span class="top-key" style={{ backgroundColor: "var(--seasalt)" }}
+            ></span>
+            <h3 class="our-beliefs__accordion-title">Вчення про Бога</h3>
+            <SvgPlus />
+            <SvgMinus />
+            <span
+              class="bottom-key-1"
+              style={{ backgroundColor: "var(--seasalt)" }}></span>
+            <span
+              class="bottom-key-2"
+              style={{ backgroundColor: "var(--seasalt)" }}></span>
+          </div>
+          <div class="our-beliefs__content-wrapper">
+            <TextImageSection
+              backgroundColor="var(--seasalt)"
+              description="Ми віримо, що є один і тільки один Бог (Второзаконня 6:4; 1Коринтян 8:4) – живий (Второзаконня 32:39-40), правдивий (Вихід 34:6), досконалий (Матвія 5:48). Він відкриває Себе як нескінченна, неосяжна, самодостатня, вічна та незмінна Особа (Вихід 3:14; Псалом 44:7)."
+              image={image2}
+            />
+            <TextImageSection
+              isReversed
+              backgroundColor="var(--seasalt)"
+              description="Бог є: Святим (Псалом 21:4; 1Петра 1:16); Всемогутнім (Буття 17:1; 18:14; Йов 42:2; Луки 1:37); Тим, Хто знає все (Псалом 93:11; 138:2; Притчі 5:21); Всюди присутнім (Буття 28:16; Вихід 3:5); Творцем  і  Вседержителем  усього, що є (Об’явлення 1:8); Єдиним, хто гідний слави та поклоніння (Вихід 20:2-7; Матвія 4:10; Римлян 16:27)."
+              image={image1}
+            />
+            <TextImageSection
+              backgroundColor="var(--seasalt)"
+              description="Ми віримо, що Бог є Триєдиним: Отець, Син і Святий Дух (Буття 1:1-2; Луки 3:21-22; Євреїв 1:1-2; Об’явлення 3:22). Кожна Особа Трійці володіє усією сукупністю божественних рис. Триєдиний Бог у Своєму єстві та властивостях є рівний і не роздільний, так що Отець – Бог, Син – Бог і Святий Дух – Бог, однак не три Боги, а один Бог (Івана 10:30; 14:26)."
+              image={image2}
+            />
+            <TextImageSection
+              isReversed
+              backgroundColor="var(--seasalt)"
+              description="Ми віримо, що Бог-Отець є ніким не створений, безначальний, ненароджений, через Якого все сталося (Івана 1:1-4). Він – святий (1Петра 1:16), добрий (Матвія 19:17), справедливий (Псалом 7:12; 70:19; Об’явлення 3:19). Бог є Отцем Господа нашого і Спасителя Ісуса Христа (Матвія 3:17; 17:5)."
+              image={image1}
+            />
+            <TextImageSection
+              backgroundColor="var(--seasalt)"
+              description="Ми віримо, що Бог-Син є не створений, а однороджений, «що в лоні Бога-Отця» (Івана 1:18). Він – єдиносущий з Отцем і володіє усіма рисами Бога. Заради спасіння людей Він утілився і став людиною (Филипʼян 2:7), не втрачаючи Своєї божественної сутності. Він став істинною Людиною, в Якій Божа і людська природи досконало поєдналися (не змішуючись, не змінюючись, не поділяючись). Отже, Ісус Христос – істинний Бог (1Івана 5:20) та істинна Людина (Римлян 5:15; 1Тимофію 2:5)."
+              image={image2}
+            />
+            <TextImageSection
+              isReversed
+              backgroundColor="var(--seasalt)"
+              description="Ісус Христос: був непорочно зачатий від Духа Святого (Матвія 1:20; Луки 1:35); тілесно народився від Діви Марії (Матвія 1:21; Луки 2:7); прожив абсолютно безгрішне життя (1Петра 2:22; Євреїв 4:15); помер на хресті за гріхи людей (Матвія 27:50; Римлян 8:34); воскрес із мертвих (Матвія 28:5-6; Дії 1:3); вознісся і сів праворуч Отця (Марка 16:19; Дії 1:9); є єдиним Заступником і Посередником між Богом і людиною (Римлян 8:34; 1Тимофію 2:5); прийде вдруге у силі та славі (Дії 1:10-11; Івана 14:1-3)."
+              image={image1}
+            />
+            <TextImageSection
+              backgroundColor="var(--seasalt)"
+              description="Ми віримо, що Бог-Святий Дух є не створений, прийшов від Отця через Сина (Івана 14:26). Він рівний Отцю і Сину і володіє усіма рисами Бога. Святий Дух: є натхненником Святого Писання (2Петра 1:21); бере участь у творенні (Буття 1:2), спасінні людини (Євреїв 3:7), будуванні Церкви (Ефесян  2:22); прославляє  Христа  (Івана 16:14); виявляє гріх (Івана 16:8-9); відроджує людину (Івана 3:5-7); веде дорогою освячення (Івана 16:13)."
+              image={image2}
+            />
+            <TextImageSection
+              isReversed
+              backgroundColor="var(--seasalt)"
+              description="Ми віримо, що у створенні неба і землі, усього видимого і невидимого, а також самої людини, брала участь Божественна Трійця: Отець, Син і Святий Дух. Ми віримо, що у створенні нового неба і нової землі, де пробуває правда, і нової людини для життя на них (2Петра 2:13), бере участь Божественна Трійця: Ісус Христос прощає грішника (Галатам 4:4); Отець приймає як синів і дочок (Галатам 4:5); Дух Святий наповнює, освячує і робить спадкоємцем вічного життя (Галатам 4:6-7)."
+              image={image1}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Section>
+
+<script is:inline type="module">
+  const ourBeliefs = document.querySelector(".our-beliefs");
+  const accordions = ourBeliefs.querySelectorAll(".our-beliefs__accordion");
+  const contentWrapperArray = ourBeliefs.querySelectorAll(
+    ".our-beliefs__content-wrapper"
+  );
+  const plusSvgArray = ourBeliefs.querySelectorAll(".plus-svg");
+  const minusSvgArray = ourBeliefs.querySelectorAll(".minus-svg");
+
+  accordions.forEach((currentAccordion) => {
+    currentAccordion.addEventListener("click", () => {
+      const currentContentWrapper = currentAccordion.querySelector(
+        ".our-beliefs__content-wrapper"
+      );
+      const currentPlusSvg = currentAccordion.querySelector(".plus-svg");
+      const currentMinusSvg = currentAccordion.querySelector(".minus-svg");
+
+      contentWrapperArray.forEach((contentWrapper) => {
+        if (contentWrapper !== currentContentWrapper) {
+          contentWrapper.classList.remove("show");
+        }
+      });
+
+      minusSvgArray.forEach((minus) => {
+        if (minus !== currentMinusSvg) {
+          minus.classList.remove("show");
+        }
+      });
+
+      plusSvgArray.forEach((plus) => {
+        if (plus !== currentPlusSvg) {
+          plus.classList.remove("hide");
+        }
+      });
+
+      currentContentWrapper.classList.toggle("show");
+      currentMinusSvg.classList.toggle("show");
+      currentPlusSvg.classList.toggle("hide");
+    });
+  });
+
+  contentWrapperArray.forEach((wrapper) => {
+    wrapper.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  });
+</script>

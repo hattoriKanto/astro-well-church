@@ -1,0 +1,118 @@
+.our-beliefs {
+  background-color: var(--seasalt);
+}
+
+.our-beliefs__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.our-beliefs__accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.our-beliefs__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.our-beliefs__accordion-header {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+  border-block: 2px solid var(--black);
+  transition: all var(--transition) ease-in-out;
+
+  svg {
+    width: 34px;
+    height: 34px;
+    transition: scale var(--transition) ease-in-out;
+  }
+}
+
+.our-beliefs__accordion-header .minus-svg {
+  display: none;
+}
+
+.our-beliefs__accordion-header .minus-svg.show {
+  display: block;
+}
+
+.our-beliefs__accordion-header .plus-svg {
+  display: block;
+}
+
+.our-beliefs__accordion-header .plus-svg.hide {
+  display: none;
+}
+
+.our-beliefs__accordion-header .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  transition: width var(--transition) ease-out, left var(--transition) ease-out;
+}
+
+.our-beliefs__accordion-header .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  transition: width var(--transition) ease-out, right var(--transition) ease-out;
+}
+
+.our-beliefs__accordion-header .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  transition: width var(--transition) ease-out, right var(--transition) ease-out;
+}
+
+.our-beliefs__accordion-header:hover .bottom-key-1,
+.our-beliefs__accordion-header:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
+
+.our-beliefs__accordion-header:hover .top-key {
+  width: 0;
+  left: 0;
+}
+
+.our-beliefs__accordion-header:hover .our-beliefs__accordion-title {
+  scale: 1.1;
+}
+
+.our-beliefs__accordion-header:hover svg {
+  scale: 1.1;
+}
+
+.our-beliefs__accordion-title {
+  font-size: 28px;
+  transition: scale var(--transition) ease-in-out;
+}
+
+.our-beliefs__content-wrapper {
+  display: none;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.our-beliefs__content-wrapper.show {
+  margin-top: 80px;
+  display: flex;
+}

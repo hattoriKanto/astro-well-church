@@ -1,10 +1,11 @@
 .text-image {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--gapBetweenTextImage);
 }
 
-.text-image + .reversed {
+.text-image.reversed {
   flex-direction: row-reverse;
 }
 
@@ -65,6 +66,7 @@
   transition: width var(--transition) ease-out, right var(--transition) ease-out;
 }
 
-.text-image__title {
-  font-size: 32px;
+.text-image__description {
+  text-align: start;
+  font-size: 20px;
 }

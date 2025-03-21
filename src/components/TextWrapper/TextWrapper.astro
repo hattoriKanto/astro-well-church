@@ -1,12 +1,9 @@
 ---
-import Description from "../../ui/Description/Description.astro";
 import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
-import Subtitle from "../../ui/Subtitle/Subtitle.astro";
 
 import "./TextWrapper.css";
 
 type TextData = {
-  subtitle: string;
   title: string;
   description: string;
 };
@@ -16,12 +13,11 @@ type Props = {
 };
 
 const {
-  textData: { title, subtitle, description },
+  textData: { title, description },
 } = Astro.props;
 ---
 
 <FlexWrapper className="text-wrapper">
-  <Subtitle>{subtitle}</Subtitle>
   <h3 class="text-wrapper__title">{title}</h3>
   <p class="text-wrapper__description">{description}</p>
 </FlexWrapper>

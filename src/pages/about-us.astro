@@ -1,127 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ChurchMember from "../ui/ChurchMember/ChurchMember.astro";
-import Container from "../ui/Container/Container.astro";
-import FlexWrapper from "../ui/FlexWrapper/FlexWrapper.astro";
-import Section from "../ui/Section/Section.astro";
-import Subtitle from "../ui/Subtitle/Subtitle.astro";
-import Title from "../ui/Title/Title.astro";
-import Description from "../ui/Description/Description.astro";
-import ImagesWrapper from "../components/ImagesWrapper/ImagesWrapper.astro";
-import TextImageSection from "../components/TextImageSection/TextImageSection.astro";
 import BackgroundImageText from "../components/BackgroundImageText/BackgroundImageText.astro";
-import TextWrapper from "../components/TextWrapper/TextWrapper.astro";
 import Footer from "../components/Footer/Footer.astro";
-import organizationInfo from "../constants/organizationInfo";
 import OurTeam from "../module/OurTeam/OurTeam.astro";
+import OurHistory from "../module/OurHistory/OurHistory.astro";
+import OurBeliefs from "../module/OurBeliefs/OurBeliefs.astro";
 
-import image1 from "../assets/image-1.jpg";
-import image2 from "../assets/image-2.jpg";
 import backgroundImage from "../assets/background-image-1.jpg";
 ---
 
 <Layout title="Learn more about us! | Well church">
   <BackgroundImageText
     backgroundImage={backgroundImage}
-    text={{ title: "Serving the world around us", subtitle: "About us" }}
+    text={{ title: "Служимо світу навколо нас", subtitle: "Про нас" }}
   />
-  <Section>
-    <Container>
-      <FlexWrapper
-        style="flex-direction: column; align-items: center; gap: var(--gapBetweenTextImage)"
-      >
-        <FlexWrapper
-          style="flex-direction: column; align-items: center; gap: var(--gapBetweenText)"
-        >
-          <Subtitle>Welcome to our church</Subtitle>
-          <Title tag="h2">Love and compassion</Title>
-          <Description tag="p" style="text-align: center;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-            cum commodi corrupti minima ea nobis? Nulla deserunt ab ipsa
-            repudiandae autem atque inventore distinctio modi similique
-            recusandae sed, corrupti esse!
-          </Description>
-        </FlexWrapper>
-        <ImagesWrapper images={[image1, image2, image1]} />
-        <FlexWrapper
-          style="justify-content: space-between; gap: var(--gapBetweenTextImage)"
-        >
-          <TextWrapper
-            textData={{
-              title: "striving for a better tomorrow",
-              subtitle: "our mission & Vision",
-              description:
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi assumenda debitis dicta ea quibusdam rerum, repellat cupiditate a distinctio doloribus quaerat praesentium dolorereiciendis culpa nisi autem veniam, rem sint?",
-            }}
-          />
-          <TextWrapper
-            textData={{
-              title: "brigning peace and joy to the world",
-              subtitle: "what we do",
-              description:
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi assumenda debitis dicta ea quibusdam rerum, repellat cupiditate a distinctio doloribus quaerat praesentium dolorereiciendis culpa nisi autem veniam, rem sint?",
-            }}
-          />
-        </FlexWrapper>
-      </FlexWrapper>
-    </Container>
-  </Section>
-  <Section style="background-color: var(--seasalt);">
-    <Container>
-      <FlexWrapper
-        style="flex-direction: column; align-items: center; gap: var(--gapBetweenTextImage)"
-      >
-        <FlexWrapper
-          style="flex-direction: column; align-items: center; gap: var(--gapBetweenText)"
-        >
-          <Subtitle>benefits</Subtitle>
-          <Title tag="h2">the benefits of joining our church</Title>
-        </FlexWrapper>
-        <FlexWrapper
-          style="flex-direction: column; gap: var(--gapBetweenTextImage)"
-        >
-          <TextImageSection
-            textData={{
-              title: "find fulfillment and joy",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-            }}
-            image={image2}
-            backgroundColor="var(--seasalt)"
-          />
-          <TextImageSection
-            isReversed
-            textData={{
-              title: "shared values",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-            }}
-            image={image1}
-            backgroundColor="var(--seasalt)"
-          />
-          <TextImageSection
-            textData={{
-              title: "charity events",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-            }}
-            image={image2}
-            backgroundColor="var(--seasalt)"
-          />
-          <TextImageSection
-            isReversed
-            textData={{
-              title: "All are welcome",
-              description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-            }}
-            image={image1}
-            backgroundColor="var(--seasalt)"
-          />
-        </FlexWrapper>
-      </FlexWrapper>
-    </Container>
-  </Section>
+  <OurHistory />
+  <OurBeliefs />
   <OurTeam />
   <Footer />
 </Layout>

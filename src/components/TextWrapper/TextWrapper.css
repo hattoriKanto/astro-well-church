@@ -7,3 +7,7 @@
 .text-wrapper__title {
   font-size: 32px;
 }
+
+.text-wrapper__description {
+  font-size: 20px;
+}
