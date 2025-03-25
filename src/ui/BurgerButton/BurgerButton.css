@@ -6,23 +6,24 @@
   cursor: pointer;
 }
 
-.hamburger--hide {
+.hamburger.hide {
   display: none;
 }
 
-.hamburger input {
+.hamburger__checkbox {
   display: none;
 }
 
 .hamburger svg {
   height: 48px;
   width: auto;
+  pointer-events: none;
   transition: transform var(--transition) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line {
   fill: none;
-  stroke: var(--black);
+  stroke: var(--white);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3;
@@ -34,11 +35,11 @@
   stroke-dasharray: 12 63;
 }
 
-.hamburger input:checked + svg {
+.hamburger__checkbox:checked + svg {
   transform: rotate(-45deg);
 }
 
-.hamburger input:checked + svg .line-top-bottom {
+.hamburger__checkbox:checked + svg .line-top-bottom {
   stroke-dasharray: 20 300;
   stroke-dashoffset: -32.42;
 }

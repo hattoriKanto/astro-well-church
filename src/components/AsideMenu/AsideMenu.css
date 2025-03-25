@@ -1,0 +1,26 @@
+.aside-menu {
+  position: absolute;
+  top: var(--headerSize);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  transition: opacity 0.3s var(--transition) ease,
+    visibility 0.3s var(--transition) ease;
+  visibility: visible;
+  opacity: 1;
+  z-index: 3;
+}
+
+.aside-menu.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.aside-menu__wrapper {
+  padding: 10px;
+  padding-top: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}

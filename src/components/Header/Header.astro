@@ -1,20 +1,22 @@
 ---
 import Container from "../../ui/Container/Container.astro";
-import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
-import logo from "../../assets/logo.png";
+import BurgerButton from "../../ui/BurgerButton/BurgerButton.astro";
+
 import "./Header.css";
+
+import logo from "../../assets/logo.png";
 ---
 
 <header class="header">
   <Container style="padding-block: 0;">
-    <FlexWrapper style="justify-content: space-between;">
+    <div class="header__wrapper">
       <a href="/" class="header__logo logo">
-        <img class="logo__image" src={logo.src} alt="Well Church Logo" />
+        <img class="logo__image" src={logo.src} alt="Лого Церква Джерело" />
       </a>
       <nav class="header__menu">
         <ul class="header__list">
           <li class="header__item">
-            <a href="/about-us" class="header__link">About</a>
+            <a href="/about-us" class="header__link">Про нас</a>
           </li>
           <li class="header__item">
             <a href="/ministries" class="header__link">Ministries</a>
@@ -27,6 +29,32 @@ import "./Header.css";
           </li>
         </ul>
       </nav>
-    </FlexWrapper>
+      <BurgerButton />
+    </div>
   </Container>
 </header>
+
+<script is:inline type="module">
+  const html = document.querySelector("html");
+  const header = document.querySelector(".header");
+  const asideMenu = document.querySelector(".aside-menu");
+  const asideWrapperMenu = document.querySelector(".aside-menu__wrapper");
+  const menu = header.querySelector(".header__menu");
+  const hamburger = header.querySelector(".hamburger");
+  const hamburgerCheckbox = hamburger.querySelector(".hamburger__checkbox");
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 768) {
+      hamburger.classList.remove("hide");
+      asideWrapperMenu.appendChild(menu);
+    } else {
+      hamburger.classList.add("hide");
+      asideWrapperMenu.removeChild(menu);
+    }
+  });
+
+  hamburgerCheckbox.addEventListener("click", () => {
+    asideMenu.classList.toggle("hide");
+    html.classList.toggle("scroll-disable");
+  });
+</script>
