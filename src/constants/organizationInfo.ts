@@ -14,7 +14,7 @@ const organizationInfo: OrganizationInformation = {
   contacts: {
     phone: "+38 (044) 432-05-83",
     email: "example@email.com",
-    address: "Kobzarska St, 10, Kyiv, 02000",
+    address: "вулиця Кобзарська, 10, Київ, 02000",
   },
   churchMembers: [
     {

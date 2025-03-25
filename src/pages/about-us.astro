@@ -1,15 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BackgroundImageText from "../components/BackgroundImageText/BackgroundImageText.astro";
-import Footer from "../components/Footer/Footer.astro";
 import OurTeam from "../module/OurTeam/OurTeam.astro";
 import OurHistory from "../module/OurHistory/OurHistory.astro";
 import OurBeliefs from "../module/OurBeliefs/OurBeliefs.astro";
+import VistUs from "../module/VisitUs/VistUs.astro";
 
 import backgroundImage from "../assets/background-image-1.jpg";
 ---
 
-<Layout title="Learn more about us! | Well church">
+<Layout title="Дізнайся більше про нас | Церква Джерело">
   <BackgroundImageText
     backgroundImage={backgroundImage}
     text={{ title: "Служимо світу навколо нас", subtitle: "Про нас" }}
@@ -17,5 +17,5 @@ import backgroundImage from "../assets/background-image-1.jpg";
   <OurHistory />
   <OurBeliefs />
   <OurTeam />
-  <Footer />
+  <VistUs />
 </Layout>

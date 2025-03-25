@@ -1,0 +1,68 @@
+---
+import organizationInfo from "../../constants/organizationInfo";
+import getFormattedPhone from "../../helpers/getFormattedPhone";
+import Container from "../../ui/Container/Container.astro";
+import Section from "../../ui/Section/Section.astro";
+import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+import Title from "../../ui/Title/Title.astro";
+
+import "./VisitUs.css";
+
+type Props = {
+  backgroundColor?: string;
+};
+
+const { backgroundColor = "var(--white)" } = Astro.props;
+const formattedPhone = getFormattedPhone(organizationInfo.contacts.phone);
+---
+
+<Section className="visit-us">
+  <Container>
+    <div class="visit-us__wrapper">
+      <div class="visit-us__text-wrapper">
+        <div class="visit-us__text">
+          <Subtitle className="visit-us__subtitle">місцезнаходження</Subtitle>
+          <Title tag="h2">приходьте до нас</Title>
+        </div>
+        <div class="visit-us__text">
+          <div class="vist-us__address-wrapper">
+            <h3 class="visit-us__h3">Наша адреса:</h3>
+            <a href={organizationInfo.mapLink} class="visit-us__text-link">
+              <p>
+                {organizationInfo.contacts.address}
+              </p>
+            </a>
+          </div>
+          <div class="vist-us__contacts-wrapper">
+            <h3 class="visit-us__h3">Наші контакти:</h3>
+            <div class="vist-us__contacts">
+              <a
+                href={`mailto:${organizationInfo.contacts.email}`}
+                class="visit-us__text-link"
+              >
+                <p>
+                  {organizationInfo.contacts.email}
+                </p>
+              </a>
+              <a href=`tel:${formattedPhone}` class="visit-us__text-link">
+                <p>
+                  {organizationInfo.contacts.phone}
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="visit-us__iframe-wrapper">
+        <span class="top-key" style={{ backgroundColor }}></span>
+        <iframe
+          class="visit-us__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5375.435474184692!2d30.442010457766948!3d50.51803107633544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d29a51b131b7%3A0x3f051be339723641!2z0KbQtdGA0LrQstCwINCg0ZbQt9C00LLQsCDQpdGA0LjRgdGC0L7QstC-0LPQviDQhNCl0JE!5e0!3m2!1suk!2sua!4v1740173174440!5m2!1suk!2sua"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <span class="bottom-key-1" style={{ backgroundColor }}></span>
+        <span class="bottom-key-2" style={{ backgroundColor }}></span>
+      </div>
+    </div>
+  </Container>
+</Section>
