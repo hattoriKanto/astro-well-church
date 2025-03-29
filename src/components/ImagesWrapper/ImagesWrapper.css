@@ -1,6 +1,10 @@
 .images-wrapper {
   gap: var(--gapBetweenImages);
   align-items: center;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .images-wrapper__image-wrapper {
@@ -18,6 +22,10 @@
 
 .images-wrapper__image-wrapper:nth-child(2n) {
   height: 600px;
+
+  @media (max-width: 900px) {
+    height: 400px;
+  }
 }
 
 .images-wrapper__image {

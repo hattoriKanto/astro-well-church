@@ -1,5 +1,5 @@
 .aside-menu {
-  position: absolute;
+  position: fixed;
   top: var(--headerSize);
   left: 0;
   width: 100%;
