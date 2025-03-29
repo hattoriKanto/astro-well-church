@@ -8,9 +8,8 @@ import Section from "../ui/Section/Section.astro";
 import Button from "../ui/Button/Button.astro";
 import ContentDecorations from "../ui/ContentDecorations/ContentDecorations";
 import Description from "../ui/Description/Description.astro";
-import SocialMedia from "../components/SocialMedia/SocialMedia.astro";
-import Iframe from "../components/Iframe/Iframe.astro";
-import ContactsList from "../components/ContactsList/ContactsList.astro";
+import OurSocialMedia from "../module/OurSocialMedia/OurSocialMedia.astro";
+import VisitUs from "../module/VisitUs/VisitUs.astro";
 import HeroSection from "../module/HeroSection/HeroSection.astro";
 import Cards from "../components/Cards/Cards";
 import HoverCard from "../components/HoverCard/HoverCard";
@@ -194,33 +193,6 @@ import image2 from "../assets/image-2.jpg";
       </FlexWrapper>
     </Container>
   </Section>
-  <Section style="background-color: var(--seasalt);">
-    <Container>
-      <FlexWrapper style="flex-direction: column; gap: 100px">
-        <FlexWrapper
-          style="align-items: stretch; justify-content: space-between; flex: 1;"
-        >
-          <FlexWrapper style="flex-direction: column; gap: 60px;">
-            <Title tag="h2">Find & Contact Us</Title>
-            <ContactsList />
-          </FlexWrapper>
-          <ContentDecorations
-            decorations={new Set(["bottom-right", "top-left"])}
-          >
-            <Iframe />
-          </ContentDecorations>
-        </FlexWrapper>
-      </FlexWrapper>
-    </Container>
-  </Section>
-  <Section style="position: relative; background-color: var(--blue)">
-    <Container>
-      <FlexWrapper style="align-items: center; justify-content: space-around;">
-        <Title tag="h2" style="color: var(--white);">
-          We are on social media platforms!
-        </Title>
-        <SocialMedia />
-      </FlexWrapper>
-    </Container>
-  </Section>
+  <VisitUs />
+  <OurSocialMedia />
 </Layout>
