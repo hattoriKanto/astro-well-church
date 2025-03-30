@@ -4,6 +4,10 @@
   @media (max-width: 900px) {
     font-size: 64px;
   }
+
+  @media (max-width: 460px) {
+    font-size: 56px;
+  }
 }
 
 .title-h2 {

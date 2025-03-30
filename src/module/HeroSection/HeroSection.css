@@ -6,6 +6,14 @@
   display: flex;
   justify-content: space-between;
   gap: 80px;
+
+  @media (max-width: 1200px) {
+    gap: 40px;
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .hero__text-wrapper {
@@ -16,6 +24,15 @@
   flex: 1;
   min-width: 50%;
   color: var(--black);
+
+  @media (max-width: 900px) {
+    align-items: center;
+    min-width: unset;
+
+    h1 {
+      text-align: center;
+    }
+  }
 }
 
 .hero__text {
@@ -23,16 +40,28 @@
   flex-direction: column;
   gap: 20px;
   font-size: 24px;
+
+  @media (max-width: 576px) {
+    font-size: 22px;
+  }
 }
 
 .hero__description {
   font-style: italic;
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 }
 
 .hero__text-footer {
   text-align: end;
   font-size: 28px;
   font-weight: 500;
+
+  @media (max-width: 576px) {
+    font-size: 24px;
+  }
 }
 
 .hero__image-wrapper {
