@@ -2,28 +2,37 @@
 import Image from "astro/components/Image.astro";
 import Container from "../../ui/Container/Container.astro";
 import Section from "../../ui/Section/Section.astro";
-import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
-import image from "../../assets/image-1.jpg";
 import Title from "../../ui/Title/Title.astro";
-import Description from "../../ui/Description/Description.astro";
-import "./HeroSection.css";
 import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+import ContentDecoration from "../../ui/ContentDecorations/ContentDecoration.astro";
+
+import "./HeroSection.css";
+
+import image from "../../assets/image-1.jpg";
 ---
 
-<Section className="section-pattern-lines">
-  <Container style="padding-block: 0">
-    <FlexWrapper style="gap: 60px">
-      <FlexWrapper className="hero__text-wrapper">
-        <Subtitle>Subtitle</Subtitle>
-        <Title tag="h1">Hero Section</Title>
-        <Description tag="p">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
-          dolorem eaque possimus voluptate beatae reprehenderit maiores itaque,
-          veritatis facere qui eum eveniet error fugit ad ut aliquid debitis
-          vel. Perspiciatis.
-        </Description>
-      </FlexWrapper>
-      <Image src={image} alt="" />
-    </FlexWrapper>
+<Section className="hero">
+  <Container>
+    <div class="hero__wrapper">
+      <div class="hero__text-wrapper">
+        <Subtitle>Вітаємо!</Subtitle>
+        <Title tag="h1">Вітаємо на сторінці Церкви "Джерело"</Title>
+        <div class="hero__text">
+          <p class="hero__description">
+            "Коли бідні та вбогі шукатимуть воду, і її не буде, — коли їхній
+            язик сохнутиме від спраги, Я, Господь, почую їх; Я, Бог Ізраїлю, не
+            залишу їх.
+          </p>
+          <p class="hero__description">
+            Я відкрию на хребтах гір ріки і посеред рівнин — джерела; Я
+            перетворю пустелю на озерний край, а суху землю на джерела вод."
+          </p>
+          <p class="hero__text-footer">Ісаї 41:17-18</p>
+        </div>
+      </div>
+      <ContentDecoration className="hero__image-wrapper">
+        <Image class="hero__image" src={image} alt="" />
+      </ContentDecoration>
+    </div>
   </Container>
 </Section>

@@ -1,0 +1,28 @@
+---
+import Container from "../../ui/Container/Container.astro";
+import Section from "../../ui/Section/Section.astro";
+import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+import Title from "../../ui/Title/Title.astro";
+
+import "./TextSection.css";
+
+type Props = {
+  subtitle: string;
+  title: string;
+  backgroundColor?: string;
+};
+
+const { subtitle, title, backgroundColor = "var(--white);" } = Astro.props;
+---
+
+<Section style={{ backgroundColor }} className="text-section">
+  <Container>
+    <div class="text-section__wrapper">
+      <Subtitle>{subtitle}</Subtitle>
+      <Title tag="h2">{title}</Title>
+      <div class="text-section__text">
+        <slot />
+      </div>
+    </div>
+  </Container>
+</Section>

@@ -1,0 +1,125 @@
+---
+import Container from "../../ui/Container/Container.astro";
+import Section from "../../ui/Section/Section.astro";
+import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+import Title from "../../ui/Title/Title.astro";
+import {
+  SvgBible,
+  SvgChurch,
+  SvgHeart,
+  SvgSupport,
+  SvgPray,
+  SvgFemale,
+  SvgMale,
+  SvgMarriage,
+  SvgCampFire,
+  SvgFamily,
+  SvgBall,
+  SvgParty,
+} from "../../ui/SvgIcons/SvgIcons";
+
+import "./OurActivities.css";
+---
+
+<Section className="our-activities">
+  <Container>
+    <div class="our-activities__wrapper">
+      <div class="our-activities__text-wrapper">
+        <Subtitle>Наша діяльність</Subtitle>
+        <Title tag="h2">Служіння у нашій церкві</Title>
+        <p class="our-activities__description">
+          Кожного Господнього дня ми збираємося, щоб поклонитися нашому Господу
+          Ісусу Христу, послухати Його слово, помолитися Богу та поспілкуватися,
+          підбадьорити братів та сестер. Для цього наша Церква має затишний зал
+          богослужінь та додаткові зали спілкувань, кімнати для молитви та
+          вивчення слова. Ви можете пригоститися запашною кавою або чаєм,
+          скуштувати сендвіч або бургер в затишному дворі або нижньому залі для
+          спілкувань.
+        </p>
+        <div class="our-activities__list-wrapper">
+          <Subtitle>Наші служіння</Subtitle>
+          <ul class="our-activities__list">
+            <li class="our-activities__list-item">
+              <div class="our-activities__list-svg-wrapper">
+                <SvgPray />
+              </div>
+              <p class="our-activities__list-text">Недільні зібрання</p>
+            </li>
+            <li class="our-activities__list-item">
+              <div class="our-activities__list-svg-wrapper">
+                <SvgChurch />
+              </div>
+              <p class="our-activities__list-text">Недільна школа</p>
+            </li>
+            <li class="our-activities__list-item">
+              <div class="our-activities__list-svg-wrapper">
+                <SvgBible />
+              </div>
+              <p class="our-activities__list-text">Вивчення слова Божого</p>
+            </li>
+            <li class="our-activities__list-item">
+              <div class="our-activities__list-svg-wrapper">
+                <SvgParty />
+              </div>
+              <p class="our-activities__list-text">Молодіжні зустрічі</p>
+            </li>
+            <li class="our-activities__list-item">
+              <div class="our-activities__list-svg-wrapper">
+                <SvgBall />
+              </div>
+              <p class="our-activities__list-text">Клуб для підлітків</p>
+            </li>
+            <li class="our-activities__list-item">
+              <div class="our-activities__list-svg-wrapper">
+                <SvgMarriage />
+              </div>
+              <p class="our-activities__list-text">Весільні церемонії</p>
+              <li class="our-activities__list-item">
+                <div class="our-activities__list-svg-wrapper">
+                  <SvgHeart />
+                </div>
+                <p class="our-activities__list-text">
+                  Християнське консультування
+                </p>
+              </li>
+              <li class="our-activities__list-item">
+                <div class="our-activities__list-svg-wrapper">
+                  <SvgSupport />
+                </div>
+                <p class="our-activities__list-text">
+                  Центр соціальної адаптації
+                </p>
+              </li>
+              <li class="our-activities__list-item">
+                <div class="our-activities__list-svg-wrapper">
+                  <SvgFamily />
+                </div>
+                <p class="our-activities__list-text">Сімейні зустрічі</p>
+              </li>
+              <li class="our-activities__list-item">
+                <div class="our-activities__list-svg-wrapper">
+                  <SvgFemale />
+                </div>
+                <p class="our-activities__list-text">Жіночі зустрічі</p>
+              </li>
+              <li class="our-activities__list-item">
+                <div class="our-activities__list-svg-wrapper">
+                  <SvgMale />
+                </div>
+                <p class="our-activities__list-text">Заходи для чоловіків</p>
+              </li>
+              <li class="our-activities__list-item">
+                <div class="our-activities__list-svg-wrapper">
+                  <SvgCampFire />
+                </div>
+                <p class="our-activities__list-text">
+                  Табори для різних вікових груп
+                </p>
+              </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Section>

@@ -1,0 +1,17 @@
+---
+import "./ContentDecorations.css";
+
+type Props = {
+  backgroundColor?: string;
+  className: string;
+};
+
+const { backgroundColor = "var(--white);", className } = Astro.props;
+---
+
+<div class=`content-decoration ${className}`>
+  <span class="top-key" style={{ backgroundColor }}></span>
+  <slot />
+  <span class="bottom-key-1" style={{ backgroundColor }}></span>
+  <span class="bottom-key-2" style={{ backgroundColor }}></span>
+</div>

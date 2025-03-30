@@ -1,19 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Image from "astro/components/Image.astro";
-import Container from "../ui/Container/Container.astro";
-import FlexWrapper from "../ui/FlexWrapper/FlexWrapper.astro";
-import Title from "../ui/Title/Title.astro";
-import Section from "../ui/Section/Section.astro";
 import Button from "../ui/Button/Button.astro";
-import ContentDecorations from "../ui/ContentDecorations/ContentDecorations";
-import Description from "../ui/Description/Description.astro";
 import OurSocialMedia from "../module/OurSocialMedia/OurSocialMedia.astro";
 import VisitUs from "../module/VisitUs/VisitUs.astro";
 import HeroSection from "../module/HeroSection/HeroSection.astro";
-import Cards from "../components/Cards/Cards";
-import HoverCard from "../components/HoverCard/HoverCard";
-import Card from "../components/Cards/Card";
+import TextSection from "../module/TextSection/TextSection.astro";
+import OurActivities from "../module/OurActivities/OurActivities.astro";
 
 type Event = {
   id: number;
@@ -59,140 +51,28 @@ const events: Event[] = [
     date: new Date(),
   },
 ];
-
-import image1 from "../assets/image-1.jpg";
-import image2 from "../assets/image-2.jpg";
 ---
 
 <Layout title="Welcome! | Well Church">
   <HeroSection />
-  <Section style="background-color: var(--seasalt)">
-    <Container>
-      <FlexWrapper style="gap: 20px">
-        <FlexWrapper
-          style="flex-direction: column; flex-basis: 50%; gap: 40px;"
-        >
-          <Title tag="h2">Section 1</Title>
-          <Description tag="p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus non eum fuga, provident in voluptatum expedita qui
-            cum, hic repellat laboriosam consequatur dignissimos aliquam
-            voluptatem quaerat odio cumque, quos rem.
-          </Description>
-          <Button href="#" backgroundColor="var(--seasalt)">Learn more</Button>
-        </FlexWrapper>
-        <FlexWrapper style="flex-basis: 50%;">
-          <ContentDecorations
-            decorations={new Set(["bottom-right", "top-left"])}
-          >
-            <Image
-              src={image1}
-              alt=""
-              style="position: relative; z-index: 2; width: 100%; height: 100%; border-radius: 12px;"
-            />
-          </ContentDecorations>
-        </FlexWrapper>
-      </FlexWrapper>
-    </Container>
-  </Section>
-  <Section style="position: relative;">
-    <Image
-      src={image2}
-      alt=""
-      style="position: absolute; z-index: 2; width: 100%; height: 100%; top: 0; left: 0; filter: brightness(0.5); object-fit: cover;"
-    />
-    <Container>
-      <FlexWrapper
-        style="flex-direction: column; align-items: flex-start; gap: 40px; width: 70%;"
-      >
-        <Title tag="h2" style="color: var(--white);">Section 2</Title>
-        <Description tag="p" style="color: var(--white);">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-          vel cumque suscipit optio ex autem aperiam unde? Iste sequi mollitia
-          rem soluta quasi, laboriosam, similique ullam, sint adipisci quibusdam
-          dignissimos?
-        </Description>
-        <Button href="#" backgroundColor="var(--white)">Learn More</Button>
-      </FlexWrapper>
-    </Container>
-  </Section>
-  <Section style="background-color:var(--blue)">
-    <Container>
-      <FlexWrapper
-        style="flex-direction: column; align-items: center; gap: 20px;"
-      >
-        <Title tag="h2" style="color: var(--white);">Section 3</Title>
-        <Description tag="p" style="color: var(--white); text-align: center;">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
-          consequatur impedit maiores harum facere perferendis enim.
-        </Description>
-        <Cards client:only="react" data={events} />
-      </FlexWrapper>
-    </Container>
-  </Section>
-  <Section style="background-color: var(--seasalt)">
-    <Container>
-      <FlexWrapper
-        style="flex-direction: column; align-items: center; gap: 80px"
-      >
-        <FlexWrapper
-          style="flex-direction: column; align-items: center; gap: 20px"
-        >
-          <Title tag="h2">Section 4</Title>
-          <Description tag="p" style="text-align: center;">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-            error facilis explicabo inventore? Omnis a ipsum voluptas mollitia
-            molestias numquam cum accusantium architecto eveniet necessitatibus
-            quasi est, accusamus magni vitae.
-          </Description>
-        </FlexWrapper>
-        <FlexWrapper style="gap: 20px">
-          <Card
-            title={events[0].title}
-            description={events[0].description}
-            date={events[0].date}
-          />
-          <Card
-            title={events[1].title}
-            description={events[1].description}
-            date={events[1].date}
-          />
-          <Card
-            title={events[2].title}
-            description={events[2].description}
-            date={events[2].date}
-          />
-        </FlexWrapper>
-        <Button href="#" backgroundColor="var(--seasalt)">Learn More</Button>
-      </FlexWrapper>
-    </Container>
-  </Section>
-  <Section style="background-color:var(--blue)">
-    <Container>
-      <FlexWrapper style="gap: 60px;">
-        <FlexWrapper
-          style="flex-direction: column; align-items: flex-start; gap: 20px; flex-basis: 60%;"
-        >
-          <Title tag="h2" style="color: var(--white);">Section 5</Title>
-          <Description tag="p" style="color: var(--white);">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-            dolores, fugiat tempore nam aliquid alias magni eaque sequi nemo
-            recusandae sint assumenda aut blanditiis praesentium nobis voluptas
-            quae ipsum hic!
-          </Description>
-        </FlexWrapper>
-        <FlexWrapper style="gap: 5px; flex-basis: 40%;">
-          <HoverCard client:only="react" link="/services" title="Services" />
-          <HoverCard client:only="react" link="/events" title="Events" />
-          <HoverCard
-            client:only="react"
-            link="/ministries"
-            title="Ministries"
-          />
-        </FlexWrapper>
-      </FlexWrapper>
-    </Container>
-  </Section>
+  <TextSection
+    backgroundColor="var(--seasalt)"
+    subtitle="Про нас"
+    title='Церква "Джерело"'
+  >
+    <p class="text-section__description">
+      Ми — Церква зцілених Ісусом Христом сердець. Джерелом нашого відновлення,
+      зцілення та спасіння є Господь Ісус Христос! Він Один є наша Надія та наше
+      Майбутнє! Наша місія – спасати, навчати, споряджати! Ми розповідаємо про
+      силу та велич Господа та Його спасіння! Ми навчаємо розуміти Христа та
+      виконувати Його слово в особистому житті! Ми споряджаємо на служіння Богу
+      та людям у ділі доброчинства, благовістя та учнівства!
+    </p>
+    <Button backgroundColor="var(--seasalt);" href="/about-us">
+      Дізнайся більше
+    </Button>
+  </TextSection>
+  <OurActivities />
   <VisitUs />
   <OurSocialMedia />
 </Layout>

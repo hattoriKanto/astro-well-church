@@ -1,5 +1,5 @@
 .button {
-  width: 244px;
+  min-width: 244px;
   border: 2px solid var(--black);
   border-radius: 0;
   box-sizing: border-box;

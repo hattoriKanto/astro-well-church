@@ -1,5 +1,9 @@
 .title-h1 {
-  font-size: 96px;
+  font-size: 76px;
+
+  @media (max-width: 900px) {
+    font-size: 64px;
+  }
 }
 
 .title-h2 {

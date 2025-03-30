@@ -1,0 +1,18 @@
+.text-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.text-section__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.text-section__description {
+  font-size: 28px;
+  text-align: center;
+}
