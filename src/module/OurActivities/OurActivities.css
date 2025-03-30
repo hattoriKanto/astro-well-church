@@ -35,6 +35,10 @@
   gap: 30px;
 }
 
+.our-activities__list-item.reversed {
+  flex-direction: row-reverse;
+}
+
 .our-activities__list-text {
   text-align: center;
   font-size: 24px;

@@ -1,0 +1,66 @@
+---
+import Card from "../../components/Cards/Card.astro";
+import Button from "../../ui/Button/Button.astro";
+import Container from "../../ui/Container/Container.astro";
+import Section from "../../ui/Section/Section.astro";
+import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+import Title from "../../ui/Title/Title.astro";
+
+import "./UpcomingEvents.css";
+
+type Event = {
+  id: number;
+  title: string;
+  description: string;
+  date: Date;
+};
+
+const events: Event[] = [
+  {
+    id: 1,
+    title: "Event 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
+    date: new Date(),
+  },
+  {
+    id: 2,
+    title: "Event 2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
+    date: new Date(),
+  },
+  {
+    id: 3,
+    title: "Event 3",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda asperiores illum explicabo optio in vitae aliquid officia vel qui distinctio laboriosam aspernatur quam facere, veritatis recusandae fugit ipsam dolorem.",
+    date: new Date(),
+  },
+];
+---
+
+<Section className="upcoming-events">
+  <Container>
+    <div class="upcoming-events__wrapper">
+      <div class="upcoming-events__text-wrapper">
+        <Subtitle>Наші події</Subtitle>
+        <Title tag="h2">Найближчі події</Title>
+      </div>
+      <div class="upcoming-events__cards-wrapper">
+        {
+          events.map((event) => {
+            return (
+              <Card
+                title={event.title}
+                description={event.description}
+                date={event.date}
+              />
+            );
+          })
+        }
+      </div>
+      <Button backgroundColor="" href="/events">Усі події</Button>
+    </div>
+  </Container>
+</Section>

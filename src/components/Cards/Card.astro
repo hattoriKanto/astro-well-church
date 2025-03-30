@@ -1,0 +1,33 @@
+---
+import ContentDecoration from "../../ui/ContentDecorations/ContentDecoration.astro";
+
+import "./Card.css";
+
+type Props = {
+  title: string;
+  description: string;
+  date: Date;
+};
+
+const { title, description, date } = Astro.props;
+const day = date.getDate();
+const month = date.toLocaleDateString("uk-UA", { month: "long" });
+const hours = date.getHours();
+const minutes = date.getMinutes();
+---
+
+<a href="#" class="card">
+  <ContentDecoration className="card__decoration-wrapper">
+    <article class="card__wrapper">
+      <div class="card__content">
+        <h3 class="card__title">{title}</h3>
+        <p class="card__description">{description}</p>
+      </div>
+      <div class="card__date date">
+        <span class="date__month">{month}</span>
+        <span class="date__day">{day}</span>
+        <span class="date__time">{hours}:{minutes}</span>
+      </div>
+    </article>
+  </ContentDecoration>
+</a>
