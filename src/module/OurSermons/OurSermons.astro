@@ -1,0 +1,74 @@
+---
+import Container from "../../ui/Container/Container.astro";
+import ContentDecoration from "../../ui/ContentDecorations/ContentDecoration.astro";
+import Section from "../../ui/Section/Section.astro";
+import Subtitle from "../../ui/Subtitle/Subtitle.astro";
+import Title from "../../ui/Title/Title.astro";
+import Button from "../../ui/Button/Button.astro";
+import { SvgPlay } from "../../ui/SvgIcons/SvgIcons";
+
+import "./OurSermons.css";
+---
+
+<Section className="our-sermons">
+  <Container>
+    <div class="our-sermons__wrapper">
+      <div class="our-sermons__text-wrapper">
+        <Subtitle>Наші богослужіння</Subtitle>
+        <Title tag="h2">
+          Останні служіння нашої церкви можете знайти і переглянути тут
+        </Title>
+      </div>
+      <div class="our-sermons__videos-wrapper">
+        <ul class="our-sermons__list">
+          <li class="our-sermons__item">
+            <a class="our-sermons__link" href="#">
+              <ContentDecoration
+                backgroundColor="var(--seasalt)"
+                className="our-sermons__link-wrapper"
+              >
+                <div class="our-sermons__link-content">
+                  <div class="our-sermons__svg-wrapper">
+                    <SvgPlay />
+                  </div>
+                  <h3 class="our-sermons__link-title">Video Title</h3>
+                </div>
+              </ContentDecoration>
+            </a>
+          </li>
+          <li class="our-sermons__item">
+            <a class="our-sermons__link" href="#">
+              <ContentDecoration
+                backgroundColor="var(--seasalt)"
+                className="our-sermons__link-wrapper"
+              >
+                <div class="our-sermons__link-content">
+                  <div class="our-sermons__svg-wrapper">
+                    <SvgPlay />
+                  </div>
+                  <h3 class="our-sermons__link-title">Video Title</h3>
+                </div>
+              </ContentDecoration>
+            </a>
+          </li>
+          <li class="our-sermons__item">
+            <a class="our-sermons__link" href="#">
+              <ContentDecoration
+                backgroundColor="var(--seasalt)"
+                className="our-sermons__link-wrapper"
+              >
+                <div class="our-sermons__link-content">
+                  <div class="our-sermons__svg-wrapper">
+                    <SvgPlay />
+                  </div>
+                  <h3 class="our-sermons__link-title">Video Title</h3>
+                </div>
+              </ContentDecoration>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <Button href="#" backgroundColor="var(--seasalt)">Дізнайся більше</Button>
+    </div>
+  </Container>
+</Section>

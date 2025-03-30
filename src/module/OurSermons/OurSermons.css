@@ -1,0 +1,66 @@
+.our-sermons {
+  background-color: var(--seasalt);
+}
+
+.our-sermons__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.our-sermons__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.our-sermons__videos-wrapper {
+  width: 100%;
+}
+
+.our-sermons__link-wrapper {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  min-height: auto;
+  flex: 1;
+  border: 2px solid var(--black);
+}
+
+.our-sermons__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.our-sermons__item {
+  width: 100%;
+}
+
+.our-sermons__link-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.our-sermons__svg-wrapper {
+  width: 64px;
+  height: 64px;
+  padding: 20px;
+
+  border-radius: 100%;
+  background-color: var(--black);
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--white);
+  }
+}
