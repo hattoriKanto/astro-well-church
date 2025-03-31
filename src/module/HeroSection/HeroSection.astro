@@ -9,6 +9,7 @@ import ContentDecoration from "../../ui/ContentDecorations/ContentDecoration.ast
 import "./HeroSection.css";
 
 import image from "../../assets/image-1.jpg";
+import Description from "../../ui/Description/Description.astro";
 ---
 
 <Section className="hero">
@@ -16,18 +17,18 @@ import image from "../../assets/image-1.jpg";
     <div class="hero__wrapper">
       <div class="hero__text-wrapper">
         <Subtitle>Вітаємо!</Subtitle>
-        <Title tag="h1">Вітаємо на сторінці Церкви "Джерело"</Title>
+        <Title tag="h1">Ласкаво просимо до церкви "Джерело"</Title>
         <div class="hero__text">
-          <p class="hero__description">
+          <Description className="hero__description">
             "Коли бідні та вбогі шукатимуть воду, і її не буде, — коли їхній
             язик сохнутиме від спраги, Я, Господь, почую їх; Я, Бог Ізраїлю, не
             залишу їх.
-          </p>
-          <p class="hero__description">
+          </Description>
+          <Description className="hero__description">
             Я відкрию на хребтах гір ріки і посеред рівнин — джерела; Я
             перетворю пустелю на озерний край, а суху землю на джерела вод."
-          </p>
-          <p class="hero__text-footer">Ісаї 41:17-18</p>
+          </Description>
+          <Description className="hero__text-footer">Ісаї 41:17-18</Description>
         </div>
       </div>
       <ContentDecoration className="hero__image-wrapper">

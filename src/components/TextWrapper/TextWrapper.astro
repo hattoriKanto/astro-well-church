@@ -1,5 +1,6 @@
 ---
-import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
+import Description from "../../ui/Description/Description.astro";
+import Title from "../../ui/Title/Title.astro";
 
 import "./TextWrapper.css";
 
@@ -17,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<FlexWrapper className="text-wrapper">
-  <h3 class="text-wrapper__title">{title}</h3>
-  <p class="text-wrapper__description">{description}</p>
-</FlexWrapper>
+<div class="text-wrapper">
+  <Title tag="h3">{title}</Title>
+  <Description className="text-wrapper__description">{description}</Description>
+</div>

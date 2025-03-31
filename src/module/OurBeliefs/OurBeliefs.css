@@ -1,9 +1,5 @@
 .our-beliefs {
   background-color: var(--seasalt);
-
-  h2 {
-    text-align: center;
-  }
 }
 
 .our-beliefs__wrapper {

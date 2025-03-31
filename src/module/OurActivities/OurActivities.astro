@@ -19,6 +19,7 @@ import {
 } from "../../ui/SvgIcons/SvgIcons";
 
 import "./OurActivities.css";
+import Description from "../../ui/Description/Description.astro";
 ---
 
 <Section className="our-activities">
@@ -27,15 +28,19 @@ import "./OurActivities.css";
       <div class="our-activities__text-wrapper">
         <Subtitle>Наша діяльність</Subtitle>
         <Title tag="h2">Служіння у нашій церкві</Title>
-        <p class="our-activities__description">
-          Кожного Господнього дня ми збираємося, щоб поклонитися нашому Господу
-          Ісусу Христу, послухати Його слово, помолитися Богу та поспілкуватися,
-          підбадьорити братів та сестер. Для цього наша Церква має затишний зал
-          богослужінь та додаткові зали спілкувань, кімнати для молитви та
-          вивчення слова. Ви можете пригоститися запашною кавою або чаєм,
-          скуштувати сендвіч або бургер в затишному дворі або нижньому залі для
-          спілкувань.
-        </p>
+        <div class="our-activities__decription-wrapper">
+          <Description className="our-activities__description">
+            Кожного Господнього дня ми збираємося, щоб поклонитися нашому
+            Господу Ісусу Христу, послухати Його слово, помолитися Богу та
+            поспілкуватися, підбадьорити братів та сестер.
+          </Description>
+          <Description className="our-activities__description">
+            Для цього наша Церква має затишний зал богослужінь та додаткові зали
+            спілкувань, кімнати для молитви та вивчення слова. Ви можете
+            пригоститися запашною кавою або чаєм, скуштувати сендвіч або бургер
+            в затишному дворі або нижньому залі для спілкувань.
+          </Description>
+        </div>
         <div class="our-activities__list-wrapper">
           <ul class="our-activities__list">
             <li class="our-activities__list-item">

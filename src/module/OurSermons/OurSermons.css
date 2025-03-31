@@ -9,15 +9,18 @@
   gap: 80px;
 }
 
+.our-activities__decription-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
 .our-sermons__text-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
-
-  h2 {
-    text-align: center;
-  }
 }
 
 .our-sermons__videos-wrapper {

@@ -28,10 +28,6 @@
   @media (max-width: 900px) {
     align-items: center;
     min-width: unset;
-
-    h1 {
-      text-align: center;
-    }
   }
 }
 
@@ -39,11 +35,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 24px;
-
-  @media (max-width: 576px) {
-    font-size: 22px;
-  }
 }
 
 .hero__description {
@@ -56,12 +47,8 @@
 
 .hero__text-footer {
   text-align: end;
-  font-size: 28px;
+  font-style: italic;
   font-weight: 500;
-
-  @media (max-width: 576px) {
-    font-size: 24px;
-  }
 }
 
 .hero__image-wrapper {

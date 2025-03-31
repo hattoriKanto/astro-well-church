@@ -1,19 +1,23 @@
 .title-h1 {
-  font-size: 76px;
+  font-size: clamp(32px, 5vw, 56px);
 
-  @media (max-width: 900px) {
-    font-size: 64px;
-  }
-
-  @media (max-width: 460px) {
-    font-size: 56px;
+  @media (max-width: 768px) {
+    text-align: center;
   }
 }
 
 .title-h2 {
-  font-size: 60px;
+  font-size: clamp(24px, 4vw, 42px);
 
-  @media (max-width: 800px) {
-    font-size: 48px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.title-h3 {
+  font-size: clamp(20px, 3vw, 32px);
+
+  @media (max-width: 768px) {
+    text-align: center;
   }
 }

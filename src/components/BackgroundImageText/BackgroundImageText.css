@@ -4,10 +4,6 @@
   h1 {
     text-align: center;
     color: var(--white);
-
-    @media (max-width: 900px) {
-      font-size: 64px;
-    }
   }
 }
 
@@ -33,10 +29,5 @@
 
 .background-image-text__title {
   color: var(--white);
-  font-size: 28px;
   text-align: center;
-
-  @media (max-width: 756px) {
-    font-size: 24px;
-  }
 }

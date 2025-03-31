@@ -1,9 +1,5 @@
 .our-history {
   background-color: var(--white);
-
-  h2 {
-    text-align: center;
-  }
 }
 
 .our-history__wrapper {
@@ -22,19 +18,11 @@
 
 .our-history__content-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 80px;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-  }
 }
 
 .our-history__description {
-  font-size: 26px;
   text-align: center;
-
-  @media (max-width: 756px) {
-    font-size: 24px;
-  }
 }
