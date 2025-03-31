@@ -1,0 +1,114 @@
+---
+import Container from "../../ui/Container/Container.astro";
+import Description from "../../ui/Description/Description.astro";
+import Section from "../../ui/Section/Section.astro";
+import Title from "../../ui/Title/Title.astro";
+import {
+  SvgBible,
+  SvgChurch,
+  SvgHeart,
+  SvgSupport,
+  SvgPray,
+  SvgFemale,
+  SvgMale,
+  SvgMarriage,
+  SvgCampFire,
+  SvgFamily,
+  SvgBall,
+  SvgParty,
+} from "../../ui/SvgIcons/SvgIcons";
+
+import "./OurMinistries.css";
+---
+
+<Section className="our-ministries">
+  <Container>
+    <div class="our-ministries__wrapper">
+      <div class="our-ministries__text-wrapper">
+        <Title tag="h2">Будь-хто знайде своє місце</Title>
+        <Description className="our-ministries__description">
+          Церква – це не лише богослужіння, а й спільнота, підтримка та
+          розвиток. Приєднуйтесь!
+        </Description>
+      </div>
+      <div class="our-ministries__list-wrapper">
+        <ul class="our-ministries__list">
+          <li class="our-ministries__list-item">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgPray />
+            </div>
+            <p class="our-ministries__list-text">Недільні зібрання</p>
+          </li>
+          <li class="our-ministries__list-item reversed">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgChurch />
+            </div>
+            <p class="our-ministries__list-text">Недільна школа</p>
+          </li>
+          <li class="our-ministries__list-item">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgBible />
+            </div>
+            <p class="our-ministries__list-text">Вивчення слова Божого</p>
+          </li>
+          <li class="our-ministries__list-item reversed">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgParty />
+            </div>
+            <p class="our-ministries__list-text">Молодіжні зустрічі</p>
+          </li>
+          <li class="our-ministries__list-item">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgBall />
+            </div>
+            <p class="our-ministries__list-text">Клуб для підлітків</p>
+          </li>
+          <li class="our-ministries__list-item reversed">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgMarriage />
+            </div>
+            <p class="our-ministries__list-text">Весільні церемонії</p>
+          </li>
+          <li class="our-ministries__list-item">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgHeart />
+            </div>
+            <p class="our-ministries__list-text">Християнське консультування</p>
+          </li>
+          <li class="our-ministries__list-item reversed">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgSupport />
+            </div>
+            <p class="our-ministries__list-text">Центр соціальної адаптації</p>
+          </li>
+          <li class="our-ministries__list-item">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgFamily />
+            </div>
+            <p class="our-ministries__list-text">Сімейні зустрічі</p>
+          </li>
+          <li class="our-ministries__list-item reversed">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgFemale />
+            </div>
+            <p class="our-ministries__list-text">Жіночі зустрічі</p>
+          </li>
+          <li class="our-ministries__list-item">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgMale />
+            </div>
+            <p class="our-ministries__list-text">Заходи для чоловіків</p>
+          </li>
+          <li class="our-ministries__list-item reversed">
+            <div class="our-ministries__list-svg-wrapper">
+              <SvgCampFire />
+            </div>
+            <p class="our-ministries__list-text">
+              Табори для різних вікових груп
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </Container>
+</Section>
