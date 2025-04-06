@@ -1,6 +1,5 @@
 .button {
   min-width: 244px;
-  border: 2px solid var(--black);
   border-radius: 0;
   box-sizing: border-box;
   color: var(--white);
@@ -18,11 +17,18 @@
   user-select: none;
 }
 
+.button-blue {
+  border: 2px solid var(--blue);
+}
+
+.button-black {
+  border: 2px solid var(--black);
+}
+
 .button::before {
   content: " ";
   width: 1.5625rem;
   height: 2px;
-  background: var(--black);
   top: 50%;
   left: 1.5em;
   position: absolute;
@@ -32,6 +38,14 @@
     width var(--transition) linear;
 }
 
+.button-blue::before {
+  background: var(--blue);
+}
+
+.button-black::before {
+  background: var(--black);
+}
+
 .button .text {
   padding-left: 2em;
   display: inline-block;
@@ -39,6 +53,13 @@
   transition: all var(--transition) ease-in-out;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.button-blue .text {
+  color: var(--blue);
+}
+
+.button-black .text {
   color: var(--black);
 }
 
@@ -71,7 +92,14 @@
 
 .button:hover {
   color: var(--white);
+}
+
+.button-black:hover {
   background: var(--black) !important;
+}
+
+.button-blue:hover {
+  background: var(--blue) !important;
 }
 
 .button:hover::before {

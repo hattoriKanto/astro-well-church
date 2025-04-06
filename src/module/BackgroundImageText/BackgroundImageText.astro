@@ -1,7 +1,6 @@
 ---
 import Container from "../../ui/Container/Container.astro";
 import Description from "../../ui/Description/Description.astro";
-import FlexWrapper from "../../ui/FlexWrapper/FlexWrapper.astro";
 import Section from "../../ui/Section/Section.astro";
 import Title from "../../ui/Title/Title.astro";
 
@@ -30,11 +29,11 @@ const {
   >
   </div>
   <Container>
-    <FlexWrapper className="background-image-text__wrapper">
+    <div class="background-image-text__wrapper">
       <Title tag="h1">{title}</Title>
       <Description className="background-image-text__title">
         {subtitle}
       </Description>
-    </FlexWrapper>
+    </div>
   </Container>
 </Section>

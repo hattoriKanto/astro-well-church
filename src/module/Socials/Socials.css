@@ -1,0 +1,96 @@
+.socials__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gapLarge);
+}
+
+.socials__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 100px;
+  height: 100px;
+  rotate: 90deg;
+  background: url("../../assets/decors/arrow-1.png") center / contain no-repeat;
+}
+
+.socials__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gapSmall);
+}
+
+.socials__media-wrapper {
+  width: 100%;
+}
+
+.socials__link-wrapper {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  min-height: auto;
+  flex: 1;
+  border: 2px solid var(--blue);
+}
+
+.socials__link-wrapper:hover {
+  .socials__svg-wrapper {
+    background-color: var(--white);
+    border-color: var(--blue);
+
+    svg {
+      path {
+        fill: var(--blue);
+      }
+    }
+  }
+}
+
+.socials__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gapExtraSmall);
+}
+
+.socials__item {
+  width: 100%;
+  background-color: var(--white);
+}
+
+.socials__link-content {
+  display: flex;
+  align-items: center;
+  gap: var(--gapExtraSmall);
+}
+
+.socials__link-title {
+  text-transform: none;
+  font-size: 22px;
+}
+
+.socials__svg-wrapper {
+  width: 64px;
+  height: 64px;
+  padding: 20px;
+
+  border-radius: 100%;
+  border: 2px solid;
+  border-color: transparent;
+  background-color: var(--blue);
+  transition: all var(--transition) ease;
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    path {
+      fill: var(--white);
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.form__label {
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.form__input-wrapper {
+  position: relative;
+  border: 2px solid var(--blue);
+}
+
+.form__input-wrapper.error {
+  border-color: var(--red);
+}
+
+.form__label:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.form__label:hover .bottom-key-1,
+.form__label:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
+
+.form__input {
+  width: 100%;
+  padding-block: 20px;
+  padding-inline: 12px;
+
+  border: none;
+  outline: none;
+}
+
+.form__input::placeholder {
+  text-transform: capitalize;
+}
+
+.form__textarea {
+  min-height: 120px;
+  display: block;
+  resize: none;
+}
+
+.form__input-error {
+  height: 14px;
+  visibility: hidden;
+  font-size: 14px;
+  color: var(--red);
+}
+
+.form__input-error.show {
+  visibility: visible;
+}

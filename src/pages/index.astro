@@ -7,9 +7,11 @@ import VisitUs from "../module/VisitUs/VisitUs.astro";
 import HeroSection from "../module/HeroSection/HeroSection.astro";
 import TextSection from "../module/TextSection/TextSection.astro";
 import OurActivities from "../module/OurActivities/OurActivities.astro";
-import OurSermons from "../module/OurSermons/OurSermons.astro";
 import UpcomingEvents from "../module/UpcomingEvents/UpcomingEvents.astro";
 import OurMinistries from "../module/OurMinistries/OurMinistries.astro";
+import Container from "../ui/Container/Container.astro";
+import Title from "../ui/Title/Title.astro";
+import Section from "../ui/Section/Section.astro";
 ---
 
 <Layout title="Welcome! | Well Church">
@@ -39,7 +41,13 @@ import OurMinistries from "../module/OurMinistries/OurMinistries.astro";
   <OurActivities />
   <OurMinistries />
   <UpcomingEvents />
-  <OurSermons />
+  <Section>
+    <Container>
+      <Title style={{ textAlign: "center" }} tag="h2">
+        Секція про соц мережі
+      </Title>
+    </Container>
+  </Section>
   <VisitUs />
   <OurSocialMedia />
 </Layout>

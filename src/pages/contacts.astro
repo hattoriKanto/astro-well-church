@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BackgroundImageText from "../module/BackgroundImageText/BackgroundImageText.astro";
+import Socials from "../module/Socials/Socials.astro";
+
+import backgroundImage from "../assets/background-image-1.jpg";
+import FormSection from "../module/FormSection/FormSection.astro";
+import Container from "../ui/Container/Container.astro";
+import Section from "../ui/Section/Section.astro";
+import Title from "../ui/Title/Title.astro";
+---
+
+<Layout title="Title">
+  <BackgroundImageText
+    backgroundImage={backgroundImage}
+    text={{
+      title: "Наші контакти",
+      subtitle: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    }}
+  />
+  <Socials />
+  <Section style={{ backgroundColor: "var(--seasalt)" }}>
+    <Container>
+      <Title tag="h2" style={{ textAlign: "center" }}>Contacts</Title>
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <Title tag="h2" style={{ textAlign: "center" }}>Charity</Title>
+    </Container>
+  </Section>
+  <FormSection />
+</Layout>

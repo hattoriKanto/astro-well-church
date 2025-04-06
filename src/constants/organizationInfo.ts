@@ -1,15 +1,38 @@
-import type { OrganizationInformation } from "../types/OrganizationInformation";
 import member1 from "../assets/church-members/member-1.jpg";
 import member2 from "../assets/church-members/member-2.jpg";
 import member3 from "../assets/church-members/member-3.jpg";
 import member4 from "../assets/church-members/member-4.jpg";
 
-const organizationInfo: OrganizationInformation = {
+export type SocialMediaKeys = "instagram" | "facebook" | "youTube";
+
+type SocialMedia = {
+  [key in SocialMediaKeys]: string;
+};
+
+type Contacts = {
+  phone: string;
+  email: string;
+  address: string;
+};
+
+export type ChurchMember = {
+  name: string;
+  position: string;
+  image: ImageMetadata;
+};
+
+type OrganizationInformation = {
+  socialMedia: SocialMedia;
+  contacts: Contacts;
+  churchMembers: ChurchMember[];
+  mapLink: string;
+};
+
+export const organizationInfo: OrganizationInformation = {
   socialMedia: {
     instagram: "",
     facebook: "https://www.facebook.com/church.kobzarka/",
-    email: "",
-    youtube: "",
+    youTube: "",
   },
   contacts: {
     phone: "+38 (044) 432-05-83",
@@ -70,5 +93,3 @@ const organizationInfo: OrganizationInformation = {
   ],
   mapLink: "https://maps.app.goo.gl/697Pas2LSeD5FBgDA",
 };
-
-export default organizationInfo;

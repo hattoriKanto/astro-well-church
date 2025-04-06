@@ -1,0 +1,25 @@
+---
+import Container from "../../ui/Container/Container.astro";
+import Description from "../../ui/Description/Description.astro";
+import Section from "../../ui/Section/Section.astro";
+import Title from "../../ui/Title/Title.astro";
+import Form from "../../components/Form/Form";
+
+import "./FormSection.css";
+---
+
+<Section className="form-section">
+  <Container>
+    <div class="form-section__wrapper">
+      <div class="form-section__text-wrapper">
+        <Title tag="h2">Залишились питання?</Title>
+        <Description className="form-section__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nihil
+          quis reprehenderit beatae ipsum, accusamus sapiente saepe modi ducimus
+          mollitia minima tenetur, repellat incidunt!
+        </Description>
+      </div>
+      <Form client:only="react" />
+    </div>
+  </Container>
+</Section>

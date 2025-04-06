@@ -1,0 +1,21 @@
+.form-section {
+  background-color: var(--seasalt);
+}
+
+.form-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gapLarge);
+}
+
+.form-section__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gapMedium);
+}
+
+.form-section__description {
+  text-align: center;
+}

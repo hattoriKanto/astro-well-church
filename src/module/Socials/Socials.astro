@@ -1,0 +1,58 @@
+---
+import Container from "../../ui/Container/Container.astro";
+import ContentDecoration from "../../ui/ContentDecorations/ContentDecoration.astro";
+import Section from "../../ui/Section/Section.astro";
+import Title from "../../ui/Title/Title.astro";
+import {
+  SvgInstagram,
+  SvgFacebook,
+  SvgYoutube,
+} from "../../ui/SvgIcons/SvgIcons";
+import { organizationInfo, type SocialMediaKeys } from "../../constants";
+
+import "./Socials.css";
+
+const socialMediaArray = Object.entries(organizationInfo.socialMedia) as [
+  SocialMediaKeys,
+  string,
+][];
+---
+
+<Section className="socials">
+  <Container>
+    <div class="socials__wrapper">
+      <div class="socials__text-wrapper">
+        <Title tag="h2">Ми у соцмережах</Title>
+      </div>
+      <div class="socials__media-wrapper">
+        <ul class="socials__list">
+          {
+            socialMediaArray.map(([key, link]) => {
+              const title = key.at(0)?.toUpperCase() + key.slice(1);
+
+              return (
+                <li class="socials__item">
+                  <a class="socials__link" href={link} target="_blank">
+                    <ContentDecoration
+                      backgroundColor="var(--seasalt)"
+                      className="socials__link-wrapper"
+                    >
+                      <div class="socials__link-content">
+                        <div class="socials__svg-wrapper">
+                          {key === "instagram" && <SvgInstagram />}
+                          {key === "facebook" && <SvgFacebook />}
+                          {key === "youTube" && <SvgYoutube />}
+                        </div>
+                        <h3 class="socials__link-title">Ми на {title}!</h3>
+                      </div>
+                    </ContentDecoration>
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </div>
+  </Container>
+</Section>
